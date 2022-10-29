@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	The ISCC–NBS System of Color Designation is a system for naming colors based on a set of 12 basic color
+	terms and a small set of adjective modifiers. This system formally defines a set of non-technical color
+	names as a subset of the Munsell System.
+
+	This XML document attempts to encompass all the attributes of the ISCC-NBS system in a machine-readable
+	format, because I wanted to be able to perform some data analysis around it. This information has been
+	transcribed from NBS Special Publication 440 "Color: Universal Language and Dictionary of Names" by
+	Kenneth L. Kelly and Deane B. Judd (https://archive.org/details/coloruniversalla00kell/).
+
+	License: As a NBS publication (through its successor NIST) the source text is a work of the United States
+	government and therefore is copyright-free. To the extent that this XML representation is transformative,
+	it has been placed under CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)
+
+	SPDX-License-Identifier: CC0-1.0
+-->
+<system>
+	<!--
+		Color names are represented here in a hierarchy; Level 1 (13 colors), Level 2 (29 colors), and
+		Level 3 (267 colors). The color numbering is unique per-level.
+
+		Ref: "The Universal Color Language", Page A-14 - A-16
+	-->
+	<names>
+		<name color="1" name="Pink" abbr="Pk">
+			<name color="1" name="Pink" abbr="Pk">
+				<name color="1" name="Vivid pink" abbr="viv.Pk" />
+				<name color="2" name="Strong pink" abbr="s.Pk" />
+				<name color="3" name="Deep pink" abbr="dp.Pk" />
+				<name color="4" name="Light pink" abbr="l.Pk" />
+				<name color="5" name="Moderate pink" abbr="m.Pk" />
+				<name color="6" name="Dark pink" abbr="d.Pk" />
+				<name color="7" name="Pale pink" abbr="p.Pk" />
+				<name color="8" name="Grayish pink" abbr="gy.Pk" />
+				<name color="9" name="Pinkish white" abbr="pkWh" />
+				<name color="10" name="Pinkish gray" abbr="pkGy" />
+			</name>
+			<name color="3" name="Yellowish pink" abbr="yPk">
+				<name color="25" name="Vivid yellowish pink" abbr="viv.yPk" />
+				<name color="26" name="Strong yellowish pink" abbr="s.yPk" />
+				<name color="27" name="Deep yellowish pink" abbr="dp.yPk" />
+				<name color="28" name="Light yellowish pink" abbr="l.yPk" />
+				<name color="29" name="Moderate yellowish pink" abbr="m.yPk" />
+				<name color="30" name="Dark yellowish pink" abbr="d.yPk" />
+				<name color="31" name="Pale yellowish pink" abbr="p.yPk" />
+				<name color="32" name="Grayish yellowish pink" abbr="gy.yPk" />
+				<name color="33" name="Brownish pink" abbr="brPk" />
+			</name>
+			<name color="25" name="Purplish pink" abbr="pPk">
+				<name color="246" name="Brilliant purplish pink" abbr="brill.pPk" />
+				<name color="247" name="Strong purplish pink" abbr="s.pPk" />
+				<name color="248" name="Deep purplish pink" abbr="dp.pPk" />
+				<name color="249" name="Light purplish pink" abbr="l.pPk" />
+				<name color="250" name="Moderate purplish pink" abbr="m.pPk" />
+				<name color="251" name="Dark purplish pink" abbr="d.pPk" />
+				<name color="252" name="Pale purplish pink" abbr="p.pPk" />
+				<name color="253" name="Grayish purplish pink" abbr="gy.pPk" />
+			</name>
+		</name>
+		<name color="2" name="Red" abbr="R">
+			<name color="2" name="Red" abbr="R">
+				<name color="11" name="Vivid red" abbr="viv.R" />
+				<name color="12" name="Strong red" abbr="s.R" />
+				<name color="13" name="Deep red" abbr="dp.R" />
+				<name color="14" name="Very deep red" abbr="v.dp.R" />
+				<name color="15" name="Moderate red" abbr="m.R" />
+				<name color="16" name="Dark red" abbr="d.R" />
+				<name color="17" name="Very dark red" abbr="v.d.R" />
+				<name color="18" name="Light grayish red" abbr="l.gy.R" />
+				<name color="19" name="Grayish red" abbr="gy.R" />
+				<name color="20" name="Dark grayish red" abbr="d.gy.R" />
+				<name color="21" name="Blackish red" abbr="bkR" />
+				<name color="22" name="Reddish gray" abbr="rGy" />
+				<name color="23" name="Dark reddish gray" abbr="d.rGy" />
+				<name color="24" name="Reddish black" abbr="rBk" />
+			</name>
+			<name color="26" name="Purplish red" abbr="pR">
+				<name color="254" name="Vivid purplish red" abbr="viv.pR" />
+				<name color="255" name="Strong purplish red" abbr="s.pR" />
+				<name color="256" name="Deep purplish red" abbr="dp.pR" />
+				<name color="257" name="Very deep purplish red" abbr="v.dp.pR" />
+				<name color="258" name="Moderate purplish red" abbr="m.pR" />
+				<name color="259" name="Dark purplish red" abbr="d.pR" />
+				<name color="260" name="Very dark purplish red" abbr="v.d.pR" />
+				<name color="261" name="Light grayish purplish red" abbr="l.gy.pR" />
+				<name color="262" name="Grayish purplish red" abbr="gy.pR" />
+			</name>
+		</name>
+		<name color="3" name="Orange" abbr="O">
+			<name color="4" name="Reddish orange" abbr="rO">
+				<name color="34" name="Vivid reddish orange" abbr="viv.rO" />
+				<name color="35" name="Strong reddish orange" abbr="s.rO" />
+				<name color="36" name="Deep reddish orange" abbr="dp.rO" />
+				<name color="37" name="Moderate reddish orange" abbr="m.rO" />
+				<name color="38" name="Dark reddish orange" abbr="d.rO" />
+				<name color="39" name="Grayish reddish orange" abbr="gy.rO" />
+			</name>
+			<name color="6" name="Orange" abbr="O">
+				<name color="48" name="Vivid orange" abbr="viv.O" />
+				<name color="49" name="Brilliant orange" abbr="brill.O" />
+				<name color="50" name="Strong orange" abbr="s.O" />
+				<name color="51" name="Deep orange" abbr="dp.O" />
+				<name color="52" name="Light orange" abbr="l.O" />
+				<name color="53" name="Moderate orange" abbr="m.O" />
+				<name color="54" name="Brownish orange" abbr="brO" />
+			</name>
+		</name>
+		<name color="4" name="Brown" abbr="Br">
+			<name color="5" name="Reddish brown" abbr="rBr">
+				<name color="40" name="Strong reddish brown" abbr="s.rBr" />
+				<name color="41" name="Deep reddish brown" abbr="dp.rBr" />
+				<name color="42" name="Light reddish brown" abbr="l.rBr" />
+				<name color="43" name="Moderate reddish brown" abbr="m.rBr" />
+				<name color="44" name="Dark reddish brown" abbr="d.rBr" />
+				<name color="45" name="Light grayish reddish brown" abbr="l.gy.rBr" />
+				<name color="46" name="Grayish reddish brown" abbr="gy.rBr" />
+				<name color="47" name="Dark grayish reddish brown" abbr="d.gy.rBr" />
+			</name>
+			<name color="7" name="Brown" abbr="Br">
+				<name color="55" name="Strong brown" abbr="s.Br" />
+				<name color="56" name="Deep brown" abbr="dp.Br" />
+				<name color="57" name="Light brown" abbr="l.Br" />
+				<name color="58" name="Moderate brown" abbr="m.Br" />
+				<name color="59" name="Dark brown" abbr="d.Br" />
+				<name color="60" name="Light grayish brown" abbr="l.gy.Br" />
+				<name color="61" name="Grayish brown" abbr="gy.Br" />
+				<name color="62" name="Dark grayish brown" abbr="d.gy.Br" />
+				<name color="63" name="Light brownish gray" abbr="l.brGy" />
+				<name color="64" name="Brownish gray" abbr="brGy" />
+				<name color="65" name="Brownish black" abbr="brBk" />
+			</name>
+			<name color="9" name="Yellowish brown" abbr="yBr">
+				<name color="74" name="Strong yellowish brown" abbr="s.yBr" />
+				<name color="75" name="Deep yellowish brown" abbr="dp.yBr" />
+				<name color="76" name="Light yellowish brown" abbr="l.yBr" />
+				<name color="77" name="Moderate yellowish brown" abbr="m.yBr" />
+				<name color="78" name="Dark yellowish brown" abbr="d.yBr" />
+				<name color="79" name="Light grayish yellowish brown" abbr="l.gy.yBr" />
+				<name color="80" name="Grayish yellowish brown" abbr="gy.yBr" />
+				<name color="81" name="Dark grayish yellowish brown" abbr="d.gy.yBr" />
+			</name>
+		</name>
+		<name color="5" name="Yellow" abbr="Y">
+			<name color="8" name="Orange yellow" abbr="OY">
+				<name color="66" name="Vivid orange yellow" abbr="viv.OY" />
+				<name color="67" name="Brilliant orange yellow" abbr="brill.OY" />
+				<name color="68" name="Strong orange yellow" abbr="s.OY" />
+				<name color="69" name="Deep orange yellow" abbr="dp.OY" />
+				<name color="70" name="Light orange yellow" abbr="l.OY" />
+				<name color="71" name="Moderate orange yellow" abbr="m.OY" />
+				<name color="72" name="Dark orange yellow" abbr="d.OY" />
+				<name color="73" name="Pale orange yellow" abbr="p.OY" />
+			</name>
+			<name color="10" name="Yellow" abbr="Y">
+				<name color="82" name="Vivid yellow" abbr="viv.Y" />
+				<name color="83" name="Brilliant yellow" abbr="brill.Y" />
+				<name color="84" name="Strong yellow" abbr="s.Y" />
+				<name color="85" name="Deep yellow" abbr="dp.Y" />
+				<name color="86" name="Light yellow" abbr="l.Y" />
+				<name color="87" name="Moderate yellow" abbr="m.Y" />
+				<name color="88" name="Dark yellow" abbr="d.Y" />
+				<name color="89" name="Pale yellow" abbr="p.Y" />
+				<name color="90" name="Grayish yellow" abbr="gy.Y" />
+				<name color="91" name="Dark grayish yellow" abbr="d.gy.Y" />
+				<name color="92" name="Yellowish white" abbr="yWh" />
+				<name color="93" name="Yellowish gray" abbr="yGy" />
+			</name>
+			<name color="12" name="Greenish yellow" abbr="gY">
+				<name color="97" name="Vivid greenish yellow" abbr="viv.gY" />
+				<name color="98" name="Brilliant greenish yellow" abbr="brill.gY" />
+				<name color="99" name="Strong greenish yellow" abbr="s.gY" />
+				<name color="100" name="Deep greenish yellow" abbr="dp.gY" />
+				<name color="101" name="Light greenish yellow" abbr="l.gY" />
+				<name color="102" name="Moderate greenish yellow" abbr="m.gY" />
+				<name color="103" name="Dark greenish yellow" abbr="d.gY" />
+				<name color="104" name="Pale greenish yellow" abbr="p.gY" />
+				<name color="105" name="Grayish greenish yellow" abbr="gy.gY" />
+			</name>
+		</name>
+		<name color="6" name="Olive" abbr="Ol">
+			<name color="11" name="Olive brown" abbr="OlBr">
+				<name color="94" name="Light olive brown" abbr="l.OlBr" />
+				<name color="95" name="Moderate olive brown" abbr="m.OlBr" />
+				<name color="96" name="Dark olive brown" abbr="d.OlBr" />
+			</name>
+			<name color="13" name="Olive" abbr="Ol">
+				<name color="106" name="Light olive" abbr="l.Ol" />
+				<name color="107" name="Moderate olive" abbr="m.Ol" />
+				<name color="108" name="Dark olive" abbr="d.Ol" />
+				<name color="109" name="Light grayish olive" abbr="l.gy.Ol" />
+				<name color="110" name="Grayish olive" abbr="gy.Ol" />
+				<name color="111" name="Dark grayish olive" abbr="d.gy.Ol" />
+				<name color="112" name="Light olive gray" abbr="l.OlGy" />
+				<name color="113" name="Olive gray" abbr="OlGy" />
+				<name color="114" name="Olive black" abbr="OlBk" />
+			</name>
+			<name color="15" name="Olive green" abbr="OlG">
+				<name color="123" name="Strong olive green" abbr="s.OlG" />
+				<name color="124" name="Deep olive green" abbr="dp.OlG" />
+				<name color="125" name="Moderate olive green" abbr="m.OlG" />
+				<name color="126" name="Dark olive green" abbr="d.OlG" />
+				<name color="127" name="Grayish olive green" abbr="gy.OlG" />
+				<name color="128" name="Dark grayish olive green" abbr="d.gy.OlG" />
+			</name>
+		</name>
+		<name color="7" name="Yellow green" abbr="YG">
+			<name color="14" name="Yellow green" abbr="YG">
+				<name color="115" name="Vivid yellow green" abbr="viv.YG" />
+				<name color="116" name="Brilliant yellow green" abbr="brill.YG" />
+				<name color="117" name="Strong yellow green" abbr="s.YG" />
+				<name color="118" name="Deep yellow green" abbr="d.YG" />
+				<name color="119" name="Light yellow green" abbr="l.YG" />
+				<name color="120" name="Moderate yellow green" abbr="m.YG" />
+				<name color="121" name="Pale yellow green" abbr="p.YG" />
+				<name color="122" name="Grayish yellow green" abbr="gy.YG" />
+			</name>
+		</name>
+		<name color="8" name="Green" abbr="G">
+			<name color="16" name="Yellowish green" abbr="yG">
+				<name color="129" name="Vivid yellowish green" abbr="viv.yG" />
+				<name color="130" name="Brilliant yellowish green" abbr="brill.yG" />
+				<name color="131" name="Strong yellowish green" abbr="s.yG" />
+				<name color="132" name="Deep yellowish green" abbr="dp.yG" />
+				<name color="133" name="Very deep yellowish green" abbr="v.dp.yG" />
+				<name color="134" name="Very light yellowish green" abbr="v.l.yG" />
+				<name color="135" name="Light yellowish green" abbr="l.yG" />
+				<name color="136" name="Moderate yellowish green" abbr="m.yG" />
+				<name color="137" name="Dark yellowish green" abbr="d.yG" />
+				<name color="138" name="Very dark yellowish green" abbr="v.d.yG" />
+			</name>
+			<name color="17" name="Green" abbr="G">
+				<name color="139" name="Vivid green" abbr="viv.G" />
+				<name color="140" name="Brilliant green" abbr="brill.G" />
+				<name color="141" name="Strong green" abbr="s.G" />
+				<name color="142" name="Deep green" abbr="dp.G" />
+				<name color="143" name="Very light green" abbr="v.l.G" />
+				<name color="144" name="Light green" abbr="l.G" />
+				<name color="145" name="Moderate green" abbr="m.G" />
+				<name color="146" name="Dark green" abbr="d.G" />
+				<name color="147" name="Very dark green" abbr="v.d.G" />
+				<name color="148" name="Very pale green" abbr="v.p.G" />
+				<name color="149" name="Pale green" abbr="p.G" />
+				<name color="150" name="Grayish green" abbr="gy.G" />
+				<name color="151" name="Dark grayish green" abbr="d.gy.G" />
+				<name color="152" name="Blackish green" abbr="bk.G" />
+				<name color="153" name="Greenish white" abbr="gWh" />
+				<name color="154" name="Light greenish gray" abbr="l.gGy" />
+				<name color="155" name="Greenish gray" abbr="gGy" />
+				<name color="156" name="Dark greenish gray" abbr="d.gGy" />
+				<name color="157" name="Greenish black" abbr="gBk" />
+			</name>
+			<name color="18" name="Bluish green" abbr="bG">
+				<name color="158" name="Vivid bluish green" abbr="viv.bG" />
+				<name color="159" name="Brilliant bluish green" abbr="brill.bG" />
+				<name color="160" name="Strong bluish green" abbr="s.bG" />
+				<name color="161" name="Deep bluish green" abbr="dp.bG" />
+				<name color="162" name="Very light bluish green" abbr="v.l.bG" />
+				<name color="163" name="Light bluish green" abbr="l.bG" />
+				<name color="164" name="Moderate bluish green" abbr="m.bG" />
+				<name color="165" name="Dark bluish green" abbr="d.bG" />
+				<name color="166" name="Very dark bluish green" abbr="v.d.bG" />
+			</name>
+		</name>
+		<name color="9" name="Blue" abbr="B">
+			<name color="19" name="Greenish blue" abbr="gB">
+				<name color="167" name="Vivid greenish blue" abbr="viv.gB" />
+				<name color="168" name="Brilliant greenish blue" abbr="brill.gB" />
+				<name color="169" name="Strong greenish blue" abbr="s.gB" />
+				<name color="170" name="Deep greenish blue" abbr="dp.gB" />
+				<name color="171" name="Very light greenish blue" abbr="v.l.gB" />
+				<name color="172" name="Light greenish blue" abbr="l.gB" />
+				<name color="173" name="Moderate greenish blue" abbr="m.gB" />
+				<name color="174" name="Dark greenish blue" abbr="d.gB" />
+				<name color="175" name="Very dark greenish blue" abbr="v.d.gB" />
+			</name>
+			<name color="20" name="Blue" abbr="B">
+				<name color="176" name="Vivid blue" abbr="viv.B" />
+				<name color="177" name="Brilliant blue" abbr="brill.B" />
+				<name color="178" name="Strong blue" abbr="s.B" />
+				<name color="179" name="Deep blue" abbr="dp.B" />
+				<name color="180" name="Very light blue" abbr="v.l.B" />
+				<name color="181" name="Light blue" abbr="l.B" />
+				<name color="182" name="Moderate blue" abbr="m.B" />
+				<name color="183" name="Dark blue" abbr="d.B" />
+				<name color="184" name="Very pale blue" abbr="v.p.B" />
+				<name color="185" name="Pale blue" abbr="p.B" />
+				<name color="186" name="Grayish blue" abbr="gy.B" />
+				<name color="187" name="Dark grayish blue" abbr="d.gy.B" />
+				<name color="188" name="Blackish blue" abbr="bkB" />
+				<name color="189" name="Bluish white" abbr="bWh" />
+				<name color="190" name="Light bluish gray" abbr="l.bGy" />
+				<name color="191" name="Bluish gray" abbr="bGy" />
+				<name color="192" name="Dark bluish gray" abbr="d.bGy" />
+				<name color="193" name="Bluish black" abbr="bBk" />
+			</name>
+			<name color="21" name="Purplish blue" abbr="pB">
+				<name color="194" name="Vivid purplish blue" abbr="viv.pB" />
+				<name color="195" name="Brilliant purplish blue" abbr="brill.pB" />
+				<name color="196" name="Strong purplish blue" abbr="s.pB" />
+				<name color="197" name="Deep purplish blue" abbr="dp.pB" />
+				<name color="198" name="Very light purplish blue" abbr="v.l.pB" />
+				<name color="199" name="Light purplish blue" abbr="l.pB" />
+				<name color="200" name="Moderate purplish blue" abbr="m.pB" />
+				<name color="201" name="Dark purplish blue" abbr="d.pB" />
+				<name color="202" name="Very pale purplish blue" abbr="v.p.pB" />
+				<name color="203" name="Pale purplish blue" abbr="p.pB" />
+				<name color="204" name="Grayish purplish blue" abbr="gy.pB" />
+			</name>
+		</name>
+		<name color="10" name="Purple" abbr="P">
+			<name color="22" name="Violet" abbr="V">
+				<name color="205" name="Vivid violet" abbr="viv.V" />
+				<name color="206" name="Brilliant violet" abbr="brill.V" />
+				<name color="207" name="Strong violet" abbr="s.V" />
+				<name color="208" name="Deep violet" abbr="dp.V" />
+				<name color="209" name="Very light violet" abbr="v.l.V" />
+				<name color="210" name="Light violet" abbr="l.V" />
+				<name color="211" name="Moderate violet" abbr="m.V" />
+				<name color="212" name="Dark violet" abbr="d.V" />
+				<name color="213" name="Very pale violet" abbr="v.p.V" />
+				<name color="214" name="Pale violet" abbr="p.V" />
+				<name color="215" name="Grayish violet" abbr="gy.V" />
+			</name>
+			<name color="23" name="Purple" abbr="P">
+				<name color="216" name="Vivid purple" abbr="viv.P" />
+				<name color="217" name="Brilliant purple" abbr="brill.P" />
+				<name color="218" name="Strong purple" abbr="s.P" />
+				<name color="219" name="Deep purple" abbr="dp.P" />
+				<name color="220" name="Very deep purple" abbr="v.dp.P" />
+				<name color="221" name="Very light purple" abbr="v.l.P" />
+				<name color="222" name="Light purple" abbr="l.P" />
+				<name color="223" name="Moderate purple" abbr="m.P" />
+				<name color="224" name="Dark purple" abbr="d.P" />
+				<name color="225" name="Very dark purple" abbr="v.d.P" />
+				<name color="226" name="Very pale purple" abbr="v.p.P" />
+				<name color="227" name="Pale purple" abbr="p.P" />
+				<name color="228" name="Grayish purple" abbr="gy.P" />
+				<name color="229" name="Dark grayish purple" abbr="d.gy.P" />
+				<name color="230" name="Blackish purple" abbr="bk.P" />
+				<name color="231" name="Purplish white" abbr="pWh" />
+				<name color="232" name="Light purplish gray" abbr="l.pGy" />
+				<name color="233" name="Purplish gray" abbr="pGy" />
+				<name color="234" name="Dark purplish gray" abbr="d.pGy" />
+				<name color="235" name="Purplish black" abbr="pBk" />
+			</name>
+			<name color="24" name="Reddish purple" abbr="rP">
+				<name color="236" name="Vivid reddish purple" abbr="viv.rP" />
+				<name color="237" name="Strong reddish purple" abbr="s.rP" />
+				<name color="238" name="Deep reddish purple" abbr="dp.rP" />
+				<name color="239" name="Very deep reddish purple" abbr="v.dp.rP" />
+				<name color="240" name="Light reddish purple" abbr="l.rP" />
+				<name color="241" name="Moderate reddish purple" abbr="m.rP" />
+				<name color="242" name="Dark reddish purple" abbr="d.rP" />
+				<name color="243" name="Very dark reddish purple" abbr="v.d.rP" />
+				<name color="244" name="Pale reddish purple" abbr="p.rP" />
+				<name color="245" name="Grayish reddish purple" abbr="gy.rP" />
+			</name>
+		</name>
+		<name color="11" name="White" abbr="Wh">
+			<name color="27" name="White" abbr="Wh">
+				<name color="263" name="White" abbr="Wh" />
+			</name>
+		</name>
+		<name color="12" name="Gray" abbr="Gy">
+			<name color="28" name="Gray" abbr="Gy">
+				<name color="264" name="Light gray" abbr="l.Gy" />
+				<name color="265" name="Medium gray" abbr="m.Gy" />
+				<name color="266" name="Dark gray" abbr="d.Gy" />
+			</name>
+		</name>
+		<name color="13" name="Black" abbr="Bk">
+			<name color="29" name="Black" abbr="Bk">
+				<name color="267" name="Black" abbr="Bk" />
+			</name>
+		</name>
+	</names>
+
+	<!--
+		A list of all Munsell hues used in the color blocks below, for convenience for applications
+		that do not have a parsing method for the Munsell names.
+
+		Munsell divides hues into five categories: (R)ed, (Y)ellow, (G)reen, (B)lue, and (P)ruple,
+		with 5 intermediate hues (YR, GY, BG, PB, RP) between them. These are then broken out into
+		ten sub-steps (numbered 1 to 10), for 100 integer points in total.
+
+		The following mapping is from values [0.0, 1.0), with 5R (the most red) at 0.00, 5Y (most
+		yellow) at 0.20, etc. This puts it in the same order as hue in the HSL/HSV systems. Note that
+		this scheme differs from that specified in ASTM Standard D 1535-08, which according to
+		Wikipedia seems to put the rollover point at 10RP, but this standard isn't public.
+	-->
+	<hues>
+		<amount id="1R">0.96</amount>
+		<amount id="4R">0.99</amount>
+		<amount id="6R">0.01</amount>
+		<amount id="7R">0.02</amount>
+		<amount id="8R">0.03</amount>
+		<amount id="9R">0.04</amount>
+		<amount id="1YR">0.06</amount>
+		<amount id="2YR">0.07</amount>
+		<amount id="3YR">0.08</amount>
+		<amount id="5YR">0.10</amount>
+		<amount id="7YR">0.12</amount>
+		<amount id="8YR">0.13</amount>
+		<amount id="1Y">0.16</amount>
+		<amount id="4Y">0.19</amount>
+		<amount id="7Y">0.22</amount>
+		<amount id="9Y">0.24</amount>
+		<amount id="2GY">0.27</amount>
+		<amount id="4GY">0.29</amount>
+		<amount id="8GY">0.33</amount>
+		<amount id="3G">0.38</amount>
+		<amount id="9G">0.44</amount>
+		<amount id="10BG">0.55</amount>
+		<amount id="9B">0.64</amount>
+		<amount id="5PB">0.70</amount>
+		<amount id="6PB">0.71</amount>
+		<amount id="7PB">0.72</amount>
+		<amount id="9PB">0.74</amount>
+		<amount id="3P">0.78</amount>
+		<amount id="9P">0.84</amount>
+		<amount id="3RP">0.88</amount>
+		<amount id="9RP">0.94</amount>
+	</hues>
+	<!--
+		A list of all chroma boundaries appearing in the color blocks below.
+	-->
+	<chromas>
+		<amount>0.0</amount>
+		<amount>0.5</amount>
+		<amount>0.7</amount>
+		<amount>1.0</amount>
+		<amount>1.2</amount>
+		<amount>1.5</amount>
+		<amount>2.0</amount>
+		<amount>2.5</amount>
+		<amount>3.0</amount>
+		<amount>5.0</amount>
+		<amount>6.0</amount>
+		<amount>7.0</amount>
+		<amount>8.0</amount>
+		<amount>9.0</amount>
+		<amount>10.0</amount>
+		<amount>11.0</amount>
+		<amount>13.0</amount>
+		<amount>14.0</amount>
+		<amount>15.0</amount>
+		<amount>INF</amount>
+	</chromas>
+	<!--
+		A list of all value boundaries appearing in the color blocks below.
+	-->
+	<values>
+		<amount>0.0</amount>
+		<amount>1.5</amount>
+		<amount>2.0</amount>
+		<amount>2.5</amount>
+		<amount>3.0</amount>
+		<amount>3.5</amount>
+		<amount>4.5</amount>
+		<amount>5.5</amount>
+		<amount>6.5</amount>
+		<amount>7.5</amount>
+		<amount>8.0</amount>
+		<amount>8.5</amount>
+		<amount>INF</amount>
+	</values>
+
+	<!--
+		This is a transcription of the "Color Name Charts".
+
+		For each hue range, we represent each color as one or more blocks, in regions defined
+		by chroma-begin/end and value-begin/end. The charts extend infinitely in the positive
+		direction on both axes; the upper bound is therefore represented as 'INF'.
+
+		The color charts include some blocks that are non-rectangular. In this representation,
+		non-rectangular blocks have been decomposed into multiple adjacent rectangles.
+	-->
+	<ranges>
+		<hue-range begin="1R" end="4R"><!-- page 16 -->
+			<range color="1" chroma-begin="11.0" chroma-end="INF" value-begin="6.5" value-end="INF" />
+			<range color="2" chroma-begin="7.0" chroma-end="11.0" value-begin="6.5" value-end="INF" />
+			<range color="3" chroma-begin="7.0" chroma-end="15.0" value-begin="5.5" value-end="6.5" />
+			<range color="4" chroma-begin="3.0" chroma-end="7.0" value-begin="8.0" value-end="INF" />
+			<range color="5" chroma-begin="3.0" chroma-end="7.0" value-begin="6.5" value-end="8.0" />
+			<range color="6" chroma-begin="5.0" chroma-end="7.0" value-begin="5.5" value-end="6.5" />
+			<range color="7" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="8" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="11" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="3.5" />
+			<range color="11" chroma-begin="13.0" chroma-end="INF" value-begin="3.5" value-end="5.5" />
+			<range color="11" chroma-begin="15.0" chroma-end="INF" value-begin="5.5" value-end="6.5" />
+			<range color="12" chroma-begin="11.0" chroma-end="13.0" value-begin="3.5" value-end="5.5" />
+			<range color="13" chroma-begin="9.0" chroma-end="11.0" value-begin="2.0" value-end="3.5" />
+			<range color="14" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="2.0" />
+			<range color="15" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="5.5" />
+			<range color="16" chroma-begin="3.0" chroma-end="9.0" value-begin="2.0" value-end="3.5" />
+			<range color="17" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="18" chroma-begin="1.5" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="19" chroma-begin="1.5" chroma-end="7.0" value-begin="3.5" value-end="5.5" />
+			<range color="20" chroma-begin="0.5" chroma-end="1.5" value-begin="2.0" value-end="2.5" />
+			<range color="20" chroma-begin="1.5" chroma-end="3.0" value-begin="2.0" value-end="3.5" />
+			<range color="21" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="22" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="23" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="24" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="4R" end="6R"><!-- page 16 -->
+			<range color="3" chroma-begin="7.0" chroma-end="11.0" value-begin="5.5" value-end="6.5" />
+			<range color="4" chroma-begin="3.0" chroma-end="7.0" value-begin="8.0" value-end="INF" />
+			<range color="5" chroma-begin="3.0" chroma-end="7.0" value-begin="6.5" value-end="8.0" />
+			<range color="6" chroma-begin="5.0" chroma-end="7.0" value-begin="5.5" value-end="6.5" />
+			<range color="7" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="8" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="11" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="3.5" />
+			<range color="11" chroma-begin="13.0" chroma-end="INF" value-begin="3.5" value-end="5.5" />
+			<range color="11" chroma-begin="15.0" chroma-end="INF" value-begin="5.5" value-end="6.5" />
+			<range color="12" chroma-begin="11.0" chroma-end="13.0" value-begin="3.5" value-end="5.5" />
+			<range color="13" chroma-begin="9.0" chroma-end="11.0" value-begin="2.0" value-end="3.5" />
+			<range color="14" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="2.0" />
+			<range color="15" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="5.5" />
+			<range color="16" chroma-begin="3.0" chroma-end="9.0" value-begin="2.0" value-end="3.5" />
+			<range color="17" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="18" chroma-begin="1.5" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="19" chroma-begin="1.5" chroma-end="7.0" value-begin="3.5" value-end="5.5" />
+			<range color="20" chroma-begin="0.5" chroma-end="1.5" value-begin="2.0" value-end="2.5" />
+			<range color="20" chroma-begin="1.5" chroma-end="3.0" value-begin="2.0" value-end="3.5" />
+			<range color="21" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="22" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="23" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="24" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="25" chroma-begin="11.0" chroma-end="INF" value-begin="6.5" value-end="INF" />
+			<range color="26" chroma-begin="7.0" chroma-end="11.0" value-begin="6.5" value-end="INF" />
+			<range color="27" chroma-begin="11.0" chroma-end="15.0" value-begin="5.5" value-end="6.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="6R" end="7R"><!-- page 17 -->
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="11" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="3.5" />
+			<range color="11" chroma-begin="13.0" chroma-end="INF" value-begin="3.5" value-end="5.5" />
+			<range color="11" chroma-begin="15.0" chroma-end="INF" value-begin="5.5" value-end="6.5" />
+			<range color="12" chroma-begin="11.0" chroma-end="13.0" value-begin="3.5" value-end="5.5" />
+			<range color="13" chroma-begin="9.0" chroma-end="11.0" value-begin="2.0" value-end="3.5" />
+			<range color="14" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="2.0" />
+			<range color="15" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="5.5" />
+			<range color="16" chroma-begin="7.0" chroma-end="9.0" value-begin="2.0" value-end="3.5" />
+			<range color="18" chroma-begin="1.5" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="19" chroma-begin="1.5" chroma-end="7.0" value-begin="3.5" value-end="5.5" />
+			<range color="22" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="23" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="24" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="25" chroma-begin="11.0" chroma-end="INF" value-begin="6.5" value-end="INF" />
+			<range color="26" chroma-begin="7.0" chroma-end="11.0" value-begin="6.5" value-end="INF" />
+			<range color="27" chroma-begin="7.0" chroma-end="15.0" value-begin="5.5" value-end="6.5" />
+			<range color="28" chroma-begin="3.0" chroma-end="7.0" value-begin="8.0" value-end="INF" />
+			<range color="29" chroma-begin="3.0" chroma-end="7.0" value-begin="6.5" value-end="8.0" />
+			<range color="30" chroma-begin="5.0" chroma-end="7.0" value-begin="5.5" value-end="6.5" />
+			<range color="31" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="32" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="41" chroma-begin="5.0" chroma-end="7.0" value-begin="0.0" value-end="2.5" />
+			<range color="43" chroma-begin="3.0" chroma-end="7.0" value-begin="2.5" value-end="3.5" />
+			<range color="44" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="44" chroma-begin="3.0" chroma-end="5.0" value-begin="0.0" value-end="2.5" />
+			<range color="46" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.5" />
+			<range color="47" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="7R" end="8R"><!-- page 17 -->
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="11" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="3.5" />
+			<range color="11" chroma-begin="13.0" chroma-end="INF" value-begin="3.5" value-end="4.5" />
+			<range color="13" chroma-begin="9.0" chroma-end="11.0" value-begin="2.0" value-end="3.5" />
+			<range color="14" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="2.0" />
+			<range color="16" chroma-begin="7.0" chroma-end="9.0" value-begin="2.0" value-end="3.5" />
+			<range color="18" chroma-begin="1.5" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="19" chroma-begin="1.5" chroma-end="7.0" value-begin="3.5" value-end="5.5" />
+			<range color="22" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="23" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="24" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="25" chroma-begin="11.0" chroma-end="INF" value-begin="6.5" value-end="INF" />
+			<range color="26" chroma-begin="7.0" chroma-end="11.0" value-begin="6.5" value-end="INF" />
+			<range color="28" chroma-begin="3.0" chroma-end="7.0" value-begin="8.0" value-end="INF" />
+			<range color="29" chroma-begin="3.0" chroma-end="7.0" value-begin="6.5" value-end="8.0" />
+			<range color="30" chroma-begin="5.0" chroma-end="7.0" value-begin="5.5" value-end="6.5" />
+			<range color="31" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="32" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="34" chroma-begin="13.0" chroma-end="INF" value-begin="4.5" value-end="6.5" />
+			<range color="35" chroma-begin="11.0" chroma-end="13.0" value-begin="4.5" value-end="6.5" />
+			<range color="36" chroma-begin="11.0" chroma-end="13.0" value-begin="3.5" value-end="4.5" />
+			<range color="37" chroma-begin="7.0" chroma-end="11.0" value-begin="4.5" value-end="6.5" />
+			<range color="38" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="4.5" />
+			<range color="41" chroma-begin="5.0" chroma-end="7.0" value-begin="0.0" value-end="2.5" />
+			<range color="43" chroma-begin="3.0" chroma-end="7.0" value-begin="2.5" value-end="3.5" />
+			<range color="44" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="44" chroma-begin="3.0" chroma-end="5.0" value-begin="0.0" value-end="2.5" />
+			<range color="46" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.5" />
+			<range color="47" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="8R" end="9R"><!-- page 18 -->
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="11" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="3.5" />
+			<range color="11" chroma-begin="13.0" chroma-end="INF" value-begin="3.5" value-end="4.5" />
+			<range color="13" chroma-begin="9.0" chroma-end="11.0" value-begin="2.0" value-end="3.5" />
+			<range color="14" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="2.0" />
+			<range color="16" chroma-begin="7.0" chroma-end="9.0" value-begin="2.0" value-end="3.5" />
+			<range color="18" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="6.5" />
+			<range color="19" chroma-begin="1.5" chroma-end="3.0" value-begin="4.5" value-end="5.5" />
+			<range color="22" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="23" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="24" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="25" chroma-begin="11.0" chroma-end="INF" value-begin="6.5" value-end="INF" />
+			<range color="26" chroma-begin="7.0" chroma-end="11.0" value-begin="6.5" value-end="INF" />
+			<range color="28" chroma-begin="3.0" chroma-end="7.0" value-begin="8.0" value-end="INF" />
+			<range color="29" chroma-begin="3.0" chroma-end="7.0" value-begin="6.5" value-end="8.0" />
+			<range color="31" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="32" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="34" chroma-begin="13.0" chroma-end="INF" value-begin="4.5" value-end="6.5" />
+			<range color="35" chroma-begin="11.0" chroma-end="13.0" value-begin="4.5" value-end="6.5" />
+			<range color="36" chroma-begin="11.0" chroma-end="13.0" value-begin="3.5" value-end="4.5" />
+			<range color="37" chroma-begin="7.0" chroma-end="11.0" value-begin="4.5" value-end="6.5" />
+			<range color="38" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="4.5" />
+			<range color="39" chroma-begin="5.0" chroma-end="7.0" value-begin="4.5" value-end="6.5" />
+			<range color="41" chroma-begin="5.0" chroma-end="7.0" value-begin="0.0" value-end="2.5" />
+			<range color="42" chroma-begin="3.0" chroma-end="5.0" value-begin="4.5" value-end="6.5" />
+			<range color="43" chroma-begin="3.0" chroma-end="7.0" value-begin="2.5" value-end="4.5" />
+			<range color="44" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="44" chroma-begin="3.0" chroma-end="5.0" value-begin="0.0" value-end="2.5" />
+			<range color="46" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="4.5" />
+			<range color="47" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="9R" end="1YR"><!-- page 18 -->
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="18" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="6.5" />
+			<range color="19" chroma-begin="1.5" chroma-end="3.0" value-begin="4.5" value-end="5.5" />
+			<range color="22" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="23" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="24" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="25" chroma-begin="11.0" chroma-end="INF" value-begin="6.5" value-end="INF" />
+			<range color="26" chroma-begin="7.0" chroma-end="11.0" value-begin="6.5" value-end="INF" />
+			<range color="28" chroma-begin="3.0" chroma-end="7.0" value-begin="8.0" value-end="INF" />
+			<range color="29" chroma-begin="3.0" chroma-end="7.0" value-begin="6.5" value-end="8.0" />
+			<range color="31" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="32" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="34" chroma-begin="13.0" chroma-end="INF" value-begin="3.5" value-end="6.5" />
+			<range color="35" chroma-begin="11.0" chroma-end="13.0" value-begin="4.5" value-end="6.5" />
+			<range color="36" chroma-begin="11.0" chroma-end="13.0" value-begin="3.5" value-end="4.5" />
+			<range color="37" chroma-begin="7.0" chroma-end="11.0" value-begin="4.5" value-end="6.5" />
+			<range color="38" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="4.5" />
+			<range color="39" chroma-begin="5.0" chroma-end="7.0" value-begin="4.5" value-end="6.5" />
+			<range color="40" chroma-begin="7.0" chroma-end="INF" value-begin="2.5" value-end="3.5" />
+			<range color="41" chroma-begin="5.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="42" chroma-begin="3.0" chroma-end="5.0" value-begin="4.5" value-end="6.5" />
+			<range color="43" chroma-begin="3.0" chroma-end="7.0" value-begin="2.5" value-end="4.5" />
+			<range color="44" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="44" chroma-begin="3.0" chroma-end="5.0" value-begin="0.0" value-end="2.5" />
+			<range color="46" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="4.5" />
+			<range color="47" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="1YR" end="2YR"><!-- page 19 -->
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="22" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="25" chroma-begin="11.0" chroma-end="INF" value-begin="6.5" value-end="INF" />
+			<range color="26" chroma-begin="7.0" chroma-end="11.0" value-begin="6.5" value-end="INF" />
+			<range color="28" chroma-begin="3.0" chroma-end="7.0" value-begin="8.0" value-end="INF" />
+			<range color="29" chroma-begin="3.0" chroma-end="7.0" value-begin="6.5" value-end="8.0" />
+			<range color="31" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="32" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="34" chroma-begin="13.0" chroma-end="INF" value-begin="3.5" value-end="6.5" />
+			<range color="35" chroma-begin="11.0" chroma-end="13.0" value-begin="4.5" value-end="6.5" />
+			<range color="36" chroma-begin="11.0" chroma-end="13.0" value-begin="3.5" value-end="4.5" />
+			<range color="37" chroma-begin="7.0" chroma-end="11.0" value-begin="4.5" value-end="6.5" />
+			<range color="38" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="4.5" />
+			<range color="39" chroma-begin="5.0" chroma-end="7.0" value-begin="4.5" value-end="6.5" />
+			<range color="40" chroma-begin="7.0" chroma-end="INF" value-begin="2.5" value-end="3.5" />
+			<range color="41" chroma-begin="5.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="42" chroma-begin="3.0" chroma-end="5.0" value-begin="4.5" value-end="6.5" />
+			<range color="43" chroma-begin="3.0" chroma-end="7.0" value-begin="2.5" value-end="4.5" />
+			<range color="44" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="44" chroma-begin="3.0" chroma-end="5.0" value-begin="0.0" value-end="2.5" />
+			<range color="45" chroma-begin="1.5" chroma-end="3.0" value-begin="4.5" value-end="6.5" />
+			<range color="46" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="4.5" />
+			<range color="47" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="64" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="65" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="2YR" end="3YR"><!-- page 19 -->
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="28" chroma-begin="3.0" chroma-end="6.0" value-begin="8.0" value-end="INF" />
+			<range color="29" chroma-begin="3.0" chroma-end="6.0" value-begin="6.5" value-end="8.0" />
+			<range color="31" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="32" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="39" chroma-begin="5.0" chroma-end="7.0" value-begin="4.5" value-end="6.5" />
+			<range color="42" chroma-begin="3.0" chroma-end="5.0" value-begin="4.5" value-end="6.5" />
+			<range color="43" chroma-begin="3.0" chroma-end="5.0" value-begin="2.5" value-end="4.5" />
+			<range color="44" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="44" chroma-begin="3.0" chroma-end="5.0" value-begin="0.0" value-end="2.5" />
+			<range color="45" chroma-begin="1.5" chroma-end="3.0" value-begin="4.5" value-end="6.5" />
+			<range color="46" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="4.5" />
+			<range color="47" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="48" chroma-begin="14.0" chroma-end="INF" value-begin="4.5" value-end="INF" />
+			<range color="49" chroma-begin="10.0" chroma-end="14.0" value-begin="7.5" value-end="INF" />
+			<range color="50" chroma-begin="10.0" chroma-end="14.0" value-begin="5.5" value-end="7.5" />
+			<range color="51" chroma-begin="10.0" chroma-end="14.0" value-begin="4.5" value-end="5.5" />
+			<range color="53" chroma-begin="6.0" chroma-end="7.0" value-begin="6.5" value-end="7.5" />
+			<range color="53" chroma-begin="7.0" chroma-end="10.0" value-begin="5.5" value-end="7.5" />
+			<range color="54" chroma-begin="7.0" chroma-end="10.0" value-begin="4.5" value-end="5.5" />
+			<range color="55" chroma-begin="5.0" chroma-end="INF" value-begin="2.5" value-end="4.5" />
+			<range color="56" chroma-begin="5.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="52" chroma-begin="6.0" chroma-end="10.0" value-begin="7.5" value-end="INF" />
+			<range color="63" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="64" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="65" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="3YR" end="5YR"><!-- page 20 -->
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="28" chroma-begin="3.0" chroma-end="6.0" value-begin="8.0" value-end="INF" />
+			<range color="29" chroma-begin="3.0" chroma-end="6.0" value-begin="6.5" value-end="8.0" />
+			<range color="31" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="32" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="45" chroma-begin="1.5" chroma-end="3.0" value-begin="4.5" value-end="6.5" />
+			<range color="48" chroma-begin="14.0" chroma-end="INF" value-begin="4.5" value-end="INF" />
+			<range color="49" chroma-begin="10.0" chroma-end="14.0" value-begin="7.5" value-end="INF" />
+			<range color="50" chroma-begin="10.0" chroma-end="14.0" value-begin="5.5" value-end="7.5" />
+			<range color="51" chroma-begin="10.0" chroma-end="14.0" value-begin="4.5" value-end="5.5" />
+			<range color="52" chroma-begin="6.0" chroma-end="10.0" value-begin="7.5" value-end="INF" />
+			<range color="53" chroma-begin="6.0" chroma-end="10.0" value-begin="5.5" value-end="7.5" />
+			<range color="54" chroma-begin="6.0" chroma-end="10.0" value-begin="4.5" value-end="5.5" />
+			<range color="55" chroma-begin="5.0" chroma-end="INF" value-begin="2.5" value-end="4.5" />
+			<range color="56" chroma-begin="5.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="57" chroma-begin="3.0" chroma-end="6.0" value-begin="4.5" value-end="6.5" />
+			<range color="58" chroma-begin="2.5" chroma-end="5.0" value-begin="2.5" value-end="4.5" />
+			<range color="59" chroma-begin="1.0" chroma-end="2.5" value-begin="0.0" value-end="1.5" />
+			<range color="59" chroma-begin="2.5" chroma-end="5.0" value-begin="0.0" value-end="2.5" />
+			<range color="61" chroma-begin="1.5" chroma-end="2.5" value-begin="2.5" value-end="4.5" />
+			<range color="62" chroma-begin="0.5" chroma-end="2.5" value-begin="1.5" value-end="2.5" />
+			<range color="63" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="64" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="65" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="5YR" end="7YR"><!-- page 20 -->
+			<range color="9" chroma-begin="0.5" chroma-end="1.2" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.2" value-begin="6.5" value-end="8.5" />
+			<range color="28" chroma-begin="3.0" chroma-end="6.0" value-begin="8.0" value-end="INF" />
+			<range color="29" chroma-begin="3.0" chroma-end="6.0" value-begin="6.5" value-end="8.0" />
+			<range color="31" chroma-begin="1.2" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="33" chroma-begin="1.2" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="48" chroma-begin="14.0" chroma-end="INF" value-begin="4.5" value-end="INF" />
+			<range color="49" chroma-begin="10.0" chroma-end="14.0" value-begin="7.5" value-end="INF" />
+			<range color="50" chroma-begin="10.0" chroma-end="14.0" value-begin="5.5" value-end="7.5" />
+			<range color="51" chroma-begin="10.0" chroma-end="14.0" value-begin="4.5" value-end="5.5" />
+			<range color="52" chroma-begin="6.0" chroma-end="10.0" value-begin="7.5" value-end="INF" />
+			<range color="53" chroma-begin="6.0" chroma-end="10.0" value-begin="5.5" value-end="7.5" />
+			<range color="54" chroma-begin="6.0" chroma-end="10.0" value-begin="4.5" value-end="5.5" />
+			<range color="55" chroma-begin="5.0" chroma-end="INF" value-begin="2.5" value-end="4.5" />
+			<range color="56" chroma-begin="5.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="57" chroma-begin="3.0" chroma-end="6.0" value-begin="4.5" value-end="6.5" />
+			<range color="58" chroma-begin="2.5" chroma-end="5.0" value-begin="2.5" value-end="4.5" />
+			<range color="59" chroma-begin="1.0" chroma-end="2.5" value-begin="0.0" value-end="1.5" />
+			<range color="59" chroma-begin="2.5" chroma-end="5.0" value-begin="0.0" value-end="2.5" />
+			<range color="60" chroma-begin="1.2" chroma-end="3.0" value-begin="4.5" value-end="6.5" />
+			<range color="61" chroma-begin="1.2" chroma-end="2.5" value-begin="2.5" value-end="4.5" />
+			<range color="62" chroma-begin="0.5" chroma-end="2.5" value-begin="1.5" value-end="2.5" />
+			<range color="63" chroma-begin="0.5" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="64" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="65" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="7YR" end="8YR"><!-- page 21 -->
+			<range color="31" chroma-begin="1.2" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="33" chroma-begin="1.2" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="55" chroma-begin="5.0" chroma-end="INF" value-begin="2.5" value-end="4.5" />
+			<range color="56" chroma-begin="5.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="57" chroma-begin="3.0" chroma-end="6.0" value-begin="4.5" value-end="6.5" />
+			<range color="58" chroma-begin="2.5" chroma-end="5.0" value-begin="2.5" value-end="4.5" />
+			<range color="59" chroma-begin="1.0" chroma-end="2.5" value-begin="0.0" value-end="1.5" />
+			<range color="59" chroma-begin="2.5" chroma-end="5.0" value-begin="0.0" value-end="2.5" />
+			<range color="60" chroma-begin="1.2" chroma-end="3.0" value-begin="4.5" value-end="6.5" />
+			<range color="61" chroma-begin="1.2" chroma-end="2.5" value-begin="2.5" value-end="4.5" />
+			<range color="62" chroma-begin="0.5" chroma-end="2.5" value-begin="1.5" value-end="2.5" />
+			<range color="63" chroma-begin="0.7" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="64" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="65" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="66" chroma-begin="14.0" chroma-end="INF" value-begin="5.5" value-end="INF" />
+			<range color="67" chroma-begin="10.0" chroma-end="14.0" value-begin="8.0" value-end="INF" />
+			<range color="68" chroma-begin="10.0" chroma-end="14.0" value-begin="6.5" value-end="8.0" />
+			<range color="69" chroma-begin="10.0" chroma-end="14.0" value-begin="5.5" value-end="6.5" />
+			<range color="70" chroma-begin="6.0" chroma-end="10.0" value-begin="8.0" value-end="INF" />
+			<range color="71" chroma-begin="6.0" chroma-end="10.0" value-begin="6.5" value-end="8.0" />
+			<range color="72" chroma-begin="6.0" chroma-end="10.0" value-begin="5.5" value-end="6.5" />
+			<range color="73" chroma-begin="3.0" chroma-end="6.0" value-begin="7.5" value-end="INF" />
+			<range color="74" chroma-begin="6.0" chroma-end="INF" value-begin="4.5" value-end="5.5" />
+			<range color="76" chroma-begin="3.0" chroma-end="6.0" value-begin="6.5" value-end="7.5" />
+			<range color="92" chroma-begin="0.7" chroma-end="1.2" value-begin="8.5" value-end="INF" />
+			<range color="93" chroma-begin="0.7" chroma-end="1.2" value-begin="6.5" value-end="8.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.7" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.7" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.7" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="8YR" end="1Y"><!-- page 21 -->
+			<range color="63" chroma-begin="0.7" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="64" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="65" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="66" chroma-begin="14.0" chroma-end="INF" value-begin="5.5" value-end="INF" />
+			<range color="67" chroma-begin="10.0" chroma-end="14.0" value-begin="8.0" value-end="INF" />
+			<range color="68" chroma-begin="10.0" chroma-end="14.0" value-begin="6.5" value-end="8.0" />
+			<range color="69" chroma-begin="10.0" chroma-end="14.0" value-begin="5.5" value-end="6.5" />
+			<range color="70" chroma-begin="6.0" chroma-end="10.0" value-begin="8.0" value-end="INF" />
+			<range color="71" chroma-begin="6.0" chroma-end="10.0" value-begin="6.5" value-end="8.0" />
+			<range color="72" chroma-begin="6.0" chroma-end="10.0" value-begin="5.5" value-end="6.5" />
+			<range color="73" chroma-begin="2.0" chroma-end="6.0" value-begin="7.5" value-end="INF" />
+			<range color="74" chroma-begin="5.0" chroma-end="INF" value-begin="3.5" value-end="5.5" />
+			<range color="75" chroma-begin="5.0" chroma-end="INF" value-begin="0.0" value-end="3.5" />
+			<range color="76" chroma-begin="3.0" chroma-end="6.0" value-begin="5.5" value-end="7.5" />
+			<range color="77" chroma-begin="2.5" chroma-end="3.0" value-begin="3.5" value-end="4.5" />
+			<range color="77" chroma-begin="3.0" chroma-end="5.0" value-begin="3.5" value-end="5.5" />
+			<range color="78" chroma-begin="1.0" chroma-end="2.5" value-begin="0.0" value-end="1.5" />
+			<range color="78" chroma-begin="2.5" chroma-end="5.0" value-begin="0.0" value-end="3.5" />
+			<range color="79" chroma-begin="1.2" chroma-end="2.0" value-begin="5.5" value-end="6.5" />
+			<range color="79" chroma-begin="2.0" chroma-end="3.0" value-begin="5.5" value-end="7.5" />
+			<range color="80" chroma-begin="1.2" chroma-end="2.5" value-begin="3.5" value-end="5.5" />
+			<range color="80" chroma-begin="2.5" chroma-end="3.0" value-begin="4.5" value-end="5.5" />
+			<range color="81" chroma-begin="0.5" chroma-end="1.2" value-begin="1.5" value-end="2.5" />
+			<range color="81" chroma-begin="1.2" chroma-end="2.5" value-begin="1.5" value-end="3.5" />
+			<range color="92" chroma-begin="0.7" chroma-end="2.0" value-begin="8.5" value-end="INF" />
+			<range color="93" chroma-begin="0.7" chroma-end="2.0" value-begin="6.5" value-end="8.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.7" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.7" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.7" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="1Y" end="4Y"><!-- page 22 -->
+			<range color="63" chroma-begin="0.7" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="64" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="65" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="82" chroma-begin="11.0" chroma-end="INF" value-begin="5.5" value-end="INF" />
+			<range color="83" chroma-begin="8.0" chroma-end="11.0" value-begin="8.0" value-end="INF" />
+			<range color="84" chroma-begin="8.0" chroma-end="11.0" value-begin="6.5" value-end="8.0" />
+			<range color="85" chroma-begin="8.0" chroma-end="11.0" value-begin="5.5" value-end="6.5" />
+			<range color="86" chroma-begin="5.0" chroma-end="8.0" value-begin="8.0" value-end="INF" />
+			<range color="87" chroma-begin="5.0" chroma-end="8.0" value-begin="6.5" value-end="8.0" />
+			<range color="88" chroma-begin="5.0" chroma-end="8.0" value-begin="5.5" value-end="6.5" />
+			<range color="89" chroma-begin="2.0" chroma-end="5.0" value-begin="8.0" value-end="INF" />
+			<range color="90" chroma-begin="2.0" chroma-end="5.0" value-begin="6.5" value-end="8.0" />
+			<range color="91" chroma-begin="3.0" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="92" chroma-begin="0.7" chroma-end="2.0" value-begin="8.5" value-end="INF" />
+			<range color="93" chroma-begin="0.7" chroma-end="2.0" value-begin="6.5" value-end="8.5" />
+			<range color="94" chroma-begin="1.2" chroma-end="3.0" value-begin="4.5" value-end="6.5" />
+			<range color="94" chroma-begin="3.0" chroma-end="INF" value-begin="4.5" value-end="5.5" />
+			<range color="95" chroma-begin="1.2" chroma-end="INF" value-begin="2.5" value-end="4.5" />
+			<range color="96" chroma-begin="0.5" chroma-end="1.0" value-begin="1.5" value-end="2.5" />
+			<range color="96" chroma-begin="1.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.7" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.7" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.7" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="4Y" end="7Y"><!-- page 22 -->
+			<range color="82" chroma-begin="11.0" chroma-end="INF" value-begin="5.5" value-end="INF" />
+			<range color="83" chroma-begin="8.0" chroma-end="11.0" value-begin="8.0" value-end="INF" />
+			<range color="84" chroma-begin="8.0" chroma-end="11.0" value-begin="6.5" value-end="8.0" />
+			<range color="85" chroma-begin="8.0" chroma-end="11.0" value-begin="5.5" value-end="6.5" />
+			<range color="86" chroma-begin="5.0" chroma-end="8.0" value-begin="8.0" value-end="INF" />
+			<range color="87" chroma-begin="5.0" chroma-end="8.0" value-begin="6.5" value-end="8.0" />
+			<range color="88" chroma-begin="5.0" chroma-end="8.0" value-begin="5.5" value-end="6.5" />
+			<range color="89" chroma-begin="2.0" chroma-end="5.0" value-begin="8.0" value-end="INF" />
+			<range color="90" chroma-begin="2.0" chroma-end="5.0" value-begin="6.5" value-end="8.0" />
+			<range color="91" chroma-begin="3.0" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="92" chroma-begin="0.7" chroma-end="2.0" value-begin="8.5" value-end="INF" />
+			<range color="93" chroma-begin="0.7" chroma-end="2.0" value-begin="6.5" value-end="8.5" />
+			<range color="106" chroma-begin="3.0" chroma-end="INF" value-begin="4.5" value-end="5.5" />
+			<range color="107" chroma-begin="3.0" chroma-end="INF" value-begin="2.5" value-end="4.5" />
+			<range color="108" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="108" chroma-begin="3.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="109" chroma-begin="2.0" chroma-end="3.0" value-begin="4.5" value-end="6.5" />
+			<range color="110" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="4.5" />
+			<range color="111" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="112" chroma-begin="0.7" chroma-end="2.0" value-begin="4.5" value-end="6.5" />
+			<range color="113" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="114" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.7" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.7" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.7" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="7Y" end="9Y"><!-- page 23 -->
+			<range color="89" chroma-begin="2.0" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="90" chroma-begin="2.0" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="92" chroma-begin="0.7" chroma-end="2.0" value-begin="8.5" value-end="INF" />
+			<range color="93" chroma-begin="0.7" chroma-end="2.0" value-begin="6.5" value-end="8.5" />
+			<range color="97" chroma-begin="11.0" chroma-end="INF" value-begin="5.5" value-end="INF" />
+			<range color="98" chroma-begin="8.0" chroma-end="11.0" value-begin="8.0" value-end="INF" />
+			<range color="99" chroma-begin="8.0" chroma-end="11.0" value-begin="6.5" value-end="8.0" />
+			<range color="100" chroma-begin="8.0" chroma-end="11.0" value-begin="5.5" value-end="6.5" />
+			<range color="101" chroma-begin="5.0" chroma-end="8.0" value-begin="8.0" value-end="INF" />
+			<range color="102" chroma-begin="5.0" chroma-end="8.0" value-begin="6.5" value-end="8.0" />
+			<range color="103" chroma-begin="5.0" chroma-end="8.0" value-begin="5.5" value-end="6.5" />
+			<range color="104" chroma-begin="3.0" chroma-end="5.0" value-begin="8.0" value-end="INF" />
+			<range color="105" chroma-begin="3.0" chroma-end="5.0" value-begin="6.5" value-end="8.0" />
+			<range color="106" chroma-begin="3.0" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="106" chroma-begin="3.0" chroma-end="INF" value-begin="4.5" value-end="5.5" />
+			<range color="107" chroma-begin="3.0" chroma-end="INF" value-begin="2.5" value-end="4.5" />
+			<range color="108" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="108" chroma-begin="3.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="109" chroma-begin="2.0" chroma-end="3.0" value-begin="4.5" value-end="6.5" />
+			<range color="110" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="4.5" />
+			<range color="111" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="112" chroma-begin="0.7" chroma-end="2.0" value-begin="4.5" value-end="6.5" />
+			<range color="113" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="114" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.7" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.7" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.7" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="9Y" end="2GY"><!-- page 23 -->
+			<range color="92" chroma-begin="0.5" chroma-end="1.2" value-begin="8.5" value-end="INF" />
+			<range color="93" chroma-begin="0.5" chroma-end="1.2" value-begin="6.5" value-end="8.5" />
+			<range color="97" chroma-begin="11.0" chroma-end="INF" value-begin="5.5" value-end="INF" />
+			<range color="98" chroma-begin="8.0" chroma-end="11.0" value-begin="8.0" value-end="INF" />
+			<range color="99" chroma-begin="8.0" chroma-end="11.0" value-begin="6.5" value-end="8.0" />
+			<range color="100" chroma-begin="8.0" chroma-end="11.0" value-begin="5.5" value-end="6.5" />
+			<range color="101" chroma-begin="5.0" chroma-end="8.0" value-begin="8.0" value-end="INF" />
+			<range color="102" chroma-begin="5.0" chroma-end="8.0" value-begin="6.5" value-end="8.0" />
+			<range color="103" chroma-begin="5.0" chroma-end="8.0" value-begin="5.5" value-end="6.5" />
+			<range color="104" chroma-begin="3.0" chroma-end="5.0" value-begin="8.0" value-end="INF" />
+			<range color="105" chroma-begin="3.0" chroma-end="5.0" value-begin="6.5" value-end="8.0" />
+			<range color="106" chroma-begin="3.0" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="106" chroma-begin="3.0" chroma-end="INF" value-begin="4.5" value-end="5.5" />
+			<range color="107" chroma-begin="3.0" chroma-end="INF" value-begin="2.5" value-end="4.5" />
+			<range color="108" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="108" chroma-begin="3.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="109" chroma-begin="1.2" chroma-end="3.0" value-begin="4.5" value-end="6.5" />
+			<range color="110" chroma-begin="1.2" chroma-end="3.0" value-begin="2.5" value-end="4.5" />
+			<range color="111" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="112" chroma-begin="0.5" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="113" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="114" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="121" chroma-begin="1.2" chroma-end="3.0" value-begin="7.5" value-end="INF" />
+			<range color="122" chroma-begin="1.2" chroma-end="3.0" value-begin="6.5" value-end="7.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="2GY" end="4GY"><!-- page 24 -->
+			<range color="92" chroma-begin="0.5" chroma-end="1.2" value-begin="8.5" value-end="INF" />
+			<range color="93" chroma-begin="0.5" chroma-end="1.2" value-begin="6.5" value-end="8.5" />
+			<range color="112" chroma-begin="0.5" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="113" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="114" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="115" chroma-begin="11.0" chroma-end="INF" value-begin="3.5" value-end="INF" />
+			<range color="116" chroma-begin="7.0" chroma-end="11.0" value-begin="7.5" value-end="INF" />
+			<range color="117" chroma-begin="7.0" chroma-end="11.0" value-begin="4.5" value-end="7.5" />
+			<range color="118" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="4.5" />
+			<range color="119" chroma-begin="3.0" chroma-end="7.0" value-begin="7.5" value-end="INF" />
+			<range color="120" chroma-begin="3.0" chroma-end="7.0" value-begin="4.5" value-end="7.5" />
+			<range color="121" chroma-begin="1.2" chroma-end="3.0" value-begin="7.5" value-end="INF" />
+			<range color="122" chroma-begin="1.2" chroma-end="3.0" value-begin="4.5" value-end="7.5" />
+			<range color="123" chroma-begin="7.0" chroma-end="INF" value-begin="2.5" value-end="3.5" />
+			<range color="124" chroma-begin="7.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="125" chroma-begin="3.0" chroma-end="7.0" value-begin="2.5" value-end="4.5" />
+			<range color="126" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="126" chroma-begin="3.0" chroma-end="7.0" value-begin="0.0" value-end="2.5" />
+			<range color="127" chroma-begin="1.2" chroma-end="3.0" value-begin="2.5" value-end="4.5" />
+			<range color="128" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="4GY" end="8GY"><!-- page 24 -->
+			<range color="115" chroma-begin="11.0" chroma-end="INF" value-begin="3.5" value-end="INF" />
+			<range color="116" chroma-begin="7.0" chroma-end="11.0" value-begin="7.5" value-end="INF" />
+			<range color="117" chroma-begin="7.0" chroma-end="11.0" value-begin="4.5" value-end="7.5" />
+			<range color="118" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="4.5" />
+			<range color="119" chroma-begin="3.0" chroma-end="7.0" value-begin="7.5" value-end="INF" />
+			<range color="120" chroma-begin="3.0" chroma-end="7.0" value-begin="4.5" value-end="7.5" />
+			<range color="121" chroma-begin="1.2" chroma-end="3.0" value-begin="7.5" value-end="INF" />
+			<range color="122" chroma-begin="1.2" chroma-end="3.0" value-begin="4.5" value-end="7.5" />
+			<range color="123" chroma-begin="7.0" chroma-end="INF" value-begin="2.5" value-end="3.5" />
+			<range color="124" chroma-begin="7.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="125" chroma-begin="3.0" chroma-end="7.0" value-begin="2.5" value-end="4.5" />
+			<range color="126" chroma-begin="1.0" chroma-end="3.0" value-begin="0.0" value-end="1.5" />
+			<range color="126" chroma-begin="3.0" chroma-end="7.0" value-begin="0.0" value-end="2.5" />
+			<range color="127" chroma-begin="1.2" chroma-end="3.0" value-begin="2.5" value-end="4.5" />
+			<range color="128" chroma-begin="0.5" chroma-end="3.0" value-begin="1.5" value-end="2.5" />
+			<range color="153" chroma-begin="0.5" chroma-end="1.2" value-begin="8.5" value-end="INF" />
+			<range color="154" chroma-begin="0.5" chroma-end="1.2" value-begin="6.5" value-end="8.5" />
+			<range color="155" chroma-begin="0.5" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="156" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="157" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="1.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="8GY" end="3G"><!-- page 25 -->
+			<range color="129" chroma-begin="11.0" chroma-end="INF" value-begin="4.5" value-end="INF" />
+			<range color="130" chroma-begin="7.0" chroma-end="11.0" value-begin="6.5" value-end="INF" />
+			<range color="131" chroma-begin="7.0" chroma-end="11.0" value-begin="4.5" value-end="6.5" />
+			<range color="132" chroma-begin="7.0" chroma-end="INF" value-begin="2.5" value-end="4.5" />
+			<range color="133" chroma-begin="7.0" chroma-end="INF" value-begin="0.0" value-end="2.5" />
+			<range color="134" chroma-begin="2.5" chroma-end="7.0" value-begin="8.5" value-end="INF" />
+			<range color="135" chroma-begin="2.5" chroma-end="7.0" value-begin="6.5" value-end="8.5" />
+			<range color="136" chroma-begin="2.5" chroma-end="7.0" value-begin="4.5" value-end="6.5" />
+			<range color="137" chroma-begin="2.5" chroma-end="7.0" value-begin="2.5" value-end="4.5" />
+			<range color="138" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.5" />
+			<range color="148" chroma-begin="1.2" chroma-end="2.5" value-begin="7.5" value-end="INF" />
+			<range color="149" chroma-begin="1.2" chroma-end="2.5" value-begin="5.5" value-end="7.5" />
+			<range color="150" chroma-begin="1.2" chroma-end="2.5" value-begin="3.5" value-end="5.5" />
+			<range color="151" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="151" chroma-begin="1.2" chroma-end="2.5" value-begin="2.5" value-end="3.5" />
+			<range color="152" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="153" chroma-begin="0.5" chroma-end="1.2" value-begin="8.5" value-end="INF" />
+			<range color="154" chroma-begin="0.5" chroma-end="1.2" value-begin="6.5" value-end="8.5" />
+			<range color="155" chroma-begin="0.5" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="156" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="157" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="3G" end="9G"><!-- page 25 -->
+			<range color="139" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="INF" />
+			<range color="140" chroma-begin="7.0" chroma-end="11.0" value-begin="5.5" value-end="INF" />
+			<range color="141" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="5.5" />
+			<range color="142" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="3.5" />
+			<range color="143" chroma-begin="2.5" chroma-end="7.0" value-begin="7.5" value-end="INF" />
+			<range color="144" chroma-begin="2.5" chroma-end="7.0" value-begin="5.5" value-end="7.5" />
+			<range color="145" chroma-begin="2.5" chroma-end="7.0" value-begin="3.5" value-end="5.5" />
+			<range color="146" chroma-begin="2.5" chroma-end="7.0" value-begin="2.0" value-end="3.5" />
+			<range color="146" chroma-begin="2.0" chroma-end="2.5" value-begin="2.0" value-end="2.5" />
+			<range color="147" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="148" chroma-begin="1.2" chroma-end="2.5" value-begin="7.5" value-end="INF" />
+			<range color="149" chroma-begin="1.2" chroma-end="2.5" value-begin="5.5" value-end="7.5" />
+			<range color="150" chroma-begin="1.2" chroma-end="2.5" value-begin="3.5" value-end="5.5" />
+			<range color="151" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="151" chroma-begin="1.2" chroma-end="2.5" value-begin="2.5" value-end="3.5" />
+			<range color="152" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="153" chroma-begin="0.5" chroma-end="1.2" value-begin="8.5" value-end="INF" />
+			<range color="154" chroma-begin="0.5" chroma-end="1.2" value-begin="6.5" value-end="8.5" />
+			<range color="155" chroma-begin="0.5" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="156" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="157" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="9G" end="10BG"><!-- page 26 -->
+			<range color="148" chroma-begin="1.2" chroma-end="2.5" value-begin="7.5" value-end="INF" />
+			<range color="149" chroma-begin="1.2" chroma-end="2.5" value-begin="5.5" value-end="7.5" />
+			<range color="150" chroma-begin="1.2" chroma-end="2.5" value-begin="3.5" value-end="5.5" />
+			<range color="151" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="151" chroma-begin="1.2" chroma-end="2.5" value-begin="2.5" value-end="3.5" />
+			<range color="152" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="153" chroma-begin="0.5" chroma-end="1.2" value-begin="8.5" value-end="INF" />
+			<range color="154" chroma-begin="0.5" chroma-end="1.2" value-begin="6.5" value-end="8.5" />
+			<range color="155" chroma-begin="0.5" chroma-end="1.2" value-begin="4.5" value-end="6.5" />
+			<range color="156" chroma-begin="0.5" chroma-end="1.2" value-begin="2.5" value-end="4.5" />
+			<range color="157" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="158" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="INF" />
+			<range color="159" chroma-begin="7.0" chroma-end="11.0" value-begin="5.5" value-end="INF" />
+			<range color="160" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="5.5" />
+			<range color="161" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="3.5" />
+			<range color="162" chroma-begin="2.5" chroma-end="7.0" value-begin="7.5" value-end="INF" />
+			<range color="163" chroma-begin="2.5" chroma-end="7.0" value-begin="5.5" value-end="7.5" />
+			<range color="164" chroma-begin="2.5" chroma-end="7.0" value-begin="3.5" value-end="5.5" />
+			<range color="165" chroma-begin="2.5" chroma-end="7.0" value-begin="2.0" value-end="3.5" />
+			<range color="165" chroma-begin="2.0" chroma-end="2.5" value-begin="2.0" value-end="2.5" />
+			<range color="166" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="10BG" end="9B"><!-- page 26 -->
+			<range color="167" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="INF" />
+			<range color="168" chroma-begin="7.0" chroma-end="11.0" value-begin="5.5" value-end="INF" />
+			<range color="169" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="5.5" />
+			<range color="170" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="3.5" />
+			<range color="171" chroma-begin="3.0" chroma-end="7.0" value-begin="7.5" value-end="INF" />
+			<range color="172" chroma-begin="3.0" chroma-end="7.0" value-begin="5.5" value-end="7.5" />
+			<range color="173" chroma-begin="3.0" chroma-end="7.0" value-begin="3.5" value-end="5.5" />
+			<range color="174" chroma-begin="3.0" chroma-end="7.0" value-begin="2.0" value-end="3.5" />
+			<range color="174" chroma-begin="2.0" chroma-end="3.0" value-begin="2.0" value-end="2.5" />
+			<range color="175" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="184" chroma-begin="1.5" chroma-end="3.0" value-begin="7.5" value-end="INF" />
+			<range color="185" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="7.5" />
+			<range color="186" chroma-begin="1.5" chroma-end="3.0" value-begin="3.0" value-end="5.5" />
+			<range color="187" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="187" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.0" />
+			<range color="188" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="189" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="190" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="191" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="192" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="193" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="9B" end="5PB"><!-- page 27 -->
+			<range color="176" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="3.0" />
+			<range color="176" chroma-begin="13.0" chroma-end="INF" value-begin="3.0" value-end="INF" />
+			<range color="177" chroma-begin="9.0" chroma-end="13.0" value-begin="5.5" value-end="INF" />
+			<range color="178" chroma-begin="9.0" chroma-end="13.0" value-begin="3.0" value-end="5.5" />
+			<range color="179" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="3.0" />
+			<range color="180" chroma-begin="5.0" chroma-end="9.0" value-begin="7.5" value-end="INF" />
+			<range color="181" chroma-begin="5.0" chroma-end="9.0" value-begin="5.5" value-end="7.5" />
+			<range color="182" chroma-begin="5.0" chroma-end="9.0" value-begin="3.0" value-end="5.5" />
+			<range color="183" chroma-begin="2.0" chroma-end="3.0" value-begin="0.0" value-end="2.5" />
+			<range color="183" chroma-begin="3.0" chroma-end="7.0" value-begin="0.0" value-end="3.0" />
+			<range color="184" chroma-begin="1.5" chroma-end="5.0" value-begin="7.5" value-end="INF" />
+			<range color="185" chroma-begin="1.5" chroma-end="5.0" value-begin="5.5" value-end="7.5" />
+			<range color="186" chroma-begin="1.5" chroma-end="5.0" value-begin="3.0" value-end="5.5" />
+			<range color="187" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="187" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.0" />
+			<range color="188" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="189" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="190" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="191" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="192" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="193" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="5PB" end="6PB"><!-- page 27 -->
+			<range color="176" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="3.0" />
+			<range color="176" chroma-begin="13.0" chroma-end="INF" value-begin="3.0" value-end="INF" />
+			<range color="177" chroma-begin="9.0" chroma-end="13.0" value-begin="5.5" value-end="INF" />
+			<range color="178" chroma-begin="9.0" chroma-end="13.0" value-begin="3.0" value-end="5.5" />
+			<range color="179" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="3.0" />
+			<range color="180" chroma-begin="7.0" chroma-end="9.0" value-begin="7.5" value-end="INF" />
+			<range color="181" chroma-begin="7.0" chroma-end="9.0" value-begin="5.5" value-end="7.5" />
+			<range color="182" chroma-begin="7.0" chroma-end="9.0" value-begin="3.0" value-end="5.5" />
+			<range color="182" chroma-begin="5.0" chroma-end="7.0" value-begin="3.0" value-end="4.5" />
+			<range color="183" chroma-begin="2.0" chroma-end="3.0" value-begin="0.0" value-end="2.5" />
+			<range color="183" chroma-begin="3.0" chroma-end="7.0" value-begin="0.0" value-end="3.0" />
+			<range color="184" chroma-begin="1.5" chroma-end="3.0" value-begin="7.5" value-end="INF" />
+			<range color="185" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="7.5" />
+			<range color="186" chroma-begin="1.5" chroma-end="3.0" value-begin="3.0" value-end="5.5" />
+			<range color="187" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="187" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.0" />
+			<range color="188" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="189" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="190" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="191" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="192" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="193" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="198" chroma-begin="5.0" chroma-end="7.0" value-begin="7.5" value-end="INF" />
+			<range color="199" chroma-begin="5.0" chroma-end="7.0" value-begin="4.5" value-end="7.5" />
+			<range color="202" chroma-begin="3.0" chroma-end="5.0" value-begin="7.5" value-end="INF" />
+			<range color="203" chroma-begin="3.0" chroma-end="5.0" value-begin="4.5" value-end="7.5" />
+			<range color="204" chroma-begin="3.0" chroma-end="5.0" value-begin="3.0" value-end="4.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="6PB" end="7PB"><!-- page 28 -->
+			<range color="176" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="3.0" />
+			<range color="176" chroma-begin="13.0" chroma-end="INF" value-begin="3.0" value-end="INF" />
+			<range color="177" chroma-begin="9.0" chroma-end="13.0" value-begin="5.5" value-end="INF" />
+			<range color="178" chroma-begin="9.0" chroma-end="13.0" value-begin="3.0" value-end="5.5" />
+			<range color="179" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="3.0" />
+			<range color="180" chroma-begin="7.0" chroma-end="9.0" value-begin="7.5" value-end="INF" />
+			<range color="181" chroma-begin="7.0" chroma-end="9.0" value-begin="5.5" value-end="7.5" />
+			<range color="182" chroma-begin="7.0" chroma-end="9.0" value-begin="3.0" value-end="5.5" />
+			<range color="182" chroma-begin="5.0" chroma-end="7.0" value-begin="3.0" value-end="4.5" />
+			<range color="183" chroma-begin="5.0" chroma-end="7.0" value-begin="0.0" value-end="3.0" />
+			<range color="184" chroma-begin="1.5" chroma-end="3.0" value-begin="7.5" value-end="INF" />
+			<range color="185" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="7.5" />
+			<range color="186" chroma-begin="1.5" chroma-end="3.0" value-begin="3.0" value-end="5.5" />
+			<range color="187" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="187" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.0" />
+			<range color="188" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="189" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="190" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="191" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="192" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="193" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="198" chroma-begin="5.0" chroma-end="7.0" value-begin="7.5" value-end="INF" />
+			<range color="199" chroma-begin="5.0" chroma-end="7.0" value-begin="4.5" value-end="7.5" />
+			<range color="201" chroma-begin="2.0" chroma-end="5.0" value-begin="0.0" value-end="2.0" />
+			<range color="202" chroma-begin="3.0" chroma-end="5.0" value-begin="7.5" value-end="INF" />
+			<range color="203" chroma-begin="3.0" chroma-end="5.0" value-begin="4.5" value-end="7.5" />
+			<range color="204" chroma-begin="2.0" chroma-end="3.0" value-begin="2.0" value-end="2.5" />
+			<range color="204" chroma-begin="3.0" chroma-end="5.0" value-begin="2.0" value-end="4.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="7PB" end="9PB"><!-- page 28 -->
+			<range color="184" chroma-begin="1.5" chroma-end="3.0" value-begin="7.5" value-end="INF" />
+			<range color="185" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="7.5" />
+			<range color="186" chroma-begin="1.5" chroma-end="3.0" value-begin="3.0" value-end="5.5" />
+			<range color="187" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="187" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.0" />
+			<range color="188" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="189" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="190" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="191" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="192" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="193" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="194" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="3.0" />
+			<range color="194" chroma-begin="13.0" chroma-end="INF" value-begin="3.0" value-end="INF" />
+			<range color="195" chroma-begin="9.0" chroma-end="11.0" value-begin="4.5" value-end="5.5" />
+			<range color="195" chroma-begin="9.0" chroma-end="13.0" value-begin="5.5" value-end="INF" />
+			<range color="196" chroma-begin="9.0" chroma-end="13.0" value-begin="3.0" value-end="4.5" />
+			<range color="196" chroma-begin="11.0" chroma-end="13.0" value-begin="4.5" value-end="5.5" />
+			<range color="197" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="3.0" />
+			<range color="198" chroma-begin="5.0" chroma-end="9.0" value-begin="7.5" value-end="INF" />
+			<range color="199" chroma-begin="5.0" chroma-end="9.0" value-begin="4.5" value-end="7.5" />
+			<range color="200" chroma-begin="5.0" chroma-end="7.0" value-begin="2.0" value-end="3.0" />
+			<range color="200" chroma-begin="5.0" chroma-end="9.0" value-begin="3.0" value-end="4.5" />
+			<range color="201" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="202" chroma-begin="3.0" chroma-end="5.0" value-begin="7.5" value-end="INF" />
+			<range color="203" chroma-begin="3.0" chroma-end="5.0" value-begin="4.5" value-end="7.5" />
+			<range color="204" chroma-begin="2.0" chroma-end="3.0" value-begin="2.0" value-end="2.5" />
+			<range color="204" chroma-begin="3.0" chroma-end="5.0" value-begin="2.0" value-end="4.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="9PB" end="3P"><!-- page 29 -->
+			<range color="205" chroma-begin="13.0" chroma-end="INF" value-begin="0.0" value-end="INF" />
+			<range color="206" chroma-begin="9.0" chroma-end="13.0" value-begin="4.5" value-end="INF" />
+			<range color="207" chroma-begin="9.0" chroma-end="13.0" value-begin="2.5" value-end="4.5" />
+			<range color="208" chroma-begin="7.0" chroma-end="13.0" value-begin="0.0" value-end="2.5" />
+			<range color="209" chroma-begin="5.0" chroma-end="9.0" value-begin="7.5" value-end="INF" />
+			<range color="210" chroma-begin="5.0" chroma-end="9.0" value-begin="4.5" value-end="7.5" />
+			<range color="211" chroma-begin="5.0" chroma-end="9.0" value-begin="2.5" value-end="4.5" />
+			<range color="212" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.5" />
+			<range color="213" chroma-begin="3.0" chroma-end="5.0" value-begin="7.5" value-end="INF" />
+			<range color="214" chroma-begin="3.0" chroma-end="5.0" value-begin="4.5" value-end="7.5" />
+			<range color="215" chroma-begin="3.0" chroma-end="5.0" value-begin="2.5" value-end="4.5" />
+			<range color="226" chroma-begin="1.5" chroma-end="3.0" value-begin="7.5" value-end="INF" />
+			<range color="227" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="7.5" />
+			<range color="228" chroma-begin="1.5" chroma-end="3.0" value-begin="3.5" value-end="5.5" />
+			<range color="229" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="229" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.5" />
+			<range color="230" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="231" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="232" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="233" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="234" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="235" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="3P" end="9P"><!-- page 29 -->
+			<range color="216" chroma-begin="13.0" chroma-end="INF" value-begin="0.0" value-end="INF" />
+			<range color="217" chroma-begin="9.0" chroma-end="13.0" value-begin="5.5" value-end="INF" />
+			<range color="218" chroma-begin="9.0" chroma-end="13.0" value-begin="3.5" value-end="5.5" />
+			<range color="219" chroma-begin="7.0" chroma-end="13.0" value-begin="2.0" value-end="3.5" />
+			<range color="220" chroma-begin="7.0" chroma-end="13.0" value-begin="0.0" value-end="2.0" />
+			<range color="221" chroma-begin="5.0" chroma-end="9.0" value-begin="7.5" value-end="INF" />
+			<range color="222" chroma-begin="5.0" chroma-end="9.0" value-begin="5.5" value-end="7.5" />
+			<range color="223" chroma-begin="5.0" chroma-end="9.0" value-begin="3.5" value-end="5.5" />
+			<range color="224" chroma-begin="2.0" chroma-end="3.0" value-begin="2.0" value-end="2.5" />
+			<range color="224" chroma-begin="3.0" chroma-end="7.0" value-begin="2.0" value-end="3.5" />
+			<range color="225" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="226" chroma-begin="1.5" chroma-end="5.0" value-begin="7.5" value-end="INF" />
+			<range color="227" chroma-begin="1.5" chroma-end="5.0" value-begin="5.5" value-end="7.5" />
+			<range color="228" chroma-begin="1.5" chroma-end="5.0" value-begin="3.5" value-end="5.5" />
+			<range color="229" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="229" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.5" />
+			<range color="230" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="231" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="232" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="233" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="234" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="235" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="9P" end="3RP"><!-- page 30 -->
+			<range color="227" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="6.5" />
+			<range color="228" chroma-begin="1.5" chroma-end="3.0" value-begin="3.5" value-end="5.5" />
+			<range color="229" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="229" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.5" />
+			<range color="230" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="231" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="232" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="233" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="234" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="235" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="236" chroma-begin="13.0" chroma-end="INF" value-begin="0.0" value-end="5.5" />
+			<range color="236" chroma-begin="15.0" chroma-end="INF" value-begin="5.5" value-end="6.5" />
+			<range color="237" chroma-begin="9.0" chroma-end="13.0" value-begin="3.5" value-end="5.5" />
+			<range color="238" chroma-begin="7.0" chroma-end="13.0" value-begin="2.0" value-end="3.5" />
+			<range color="239" chroma-begin="7.0" chroma-end="13.0" value-begin="0.0" value-end="2.0" />
+			<range color="240" chroma-begin="5.0" chroma-end="9.0" value-begin="5.5" value-end="6.5" />
+			<range color="241" chroma-begin="5.0" chroma-end="9.0" value-begin="3.5" value-end="5.5" />
+			<range color="242" chroma-begin="3.0" chroma-end="7.0" value-begin="2.0" value-end="3.5" />
+			<range color="242" chroma-begin="2.0" chroma-end="3.0" value-begin="2.0" value-end="2.5" />
+			<range color="243" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="244" chroma-begin="3.0" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="245" chroma-begin="3.0" chroma-end="5.0" value-begin="3.5" value-end="5.5" />
+			<range color="246" chroma-begin="9.0" chroma-end="INF" value-begin="7.5" value-end="INF" />
+			<range color="247" chroma-begin="9.0" chroma-end="INF" value-begin="6.5" value-end="7.5" />
+			<range color="248" chroma-begin="9.0" chroma-end="15.0" value-begin="5.5" value-end="6.5" />
+			<range color="249" chroma-begin="5.0" chroma-end="9.0" value-begin="7.5" value-end="INF" />
+			<range color="250" chroma-begin="5.0" chroma-end="9.0" value-begin="6.5" value-end="7.5" />
+			<range color="252" chroma-begin="1.5" chroma-end="5.0" value-begin="7.5" value-end="INF" />
+			<range color="253" chroma-begin="1.5" chroma-end="5.0" value-begin="6.5" value-end="7.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="3RP" end="9RP"><!-- page 30 -->
+			<range color="227" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="6.5" />
+			<range color="228" chroma-begin="1.5" chroma-end="3.0" value-begin="3.5" value-end="5.5" />
+			<range color="229" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="229" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.5" />
+			<range color="230" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="231" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="232" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="233" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="234" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="235" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="246" chroma-begin="9.0" chroma-end="INF" value-begin="7.5" value-end="INF" />
+			<range color="247" chroma-begin="9.0" chroma-end="INF" value-begin="6.5" value-end="7.5" />
+			<range color="248" chroma-begin="9.0" chroma-end="15.0" value-begin="5.5" value-end="6.5" />
+			<range color="249" chroma-begin="5.0" chroma-end="9.0" value-begin="7.5" value-end="INF" />
+			<range color="250" chroma-begin="5.0" chroma-end="9.0" value-begin="6.5" value-end="7.5" />
+			<range color="251" chroma-begin="5.0" chroma-end="9.0" value-begin="5.5" value-end="6.5" />
+			<range color="252" chroma-begin="1.5" chroma-end="5.0" value-begin="7.5" value-end="INF" />
+			<range color="253" chroma-begin="1.5" chroma-end="5.0" value-begin="6.5" value-end="7.5" />
+			<range color="254" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="2.0" />
+			<range color="254" chroma-begin="13.0" chroma-end="INF" value-begin="2.0" value-end="5.5" />
+			<range color="254" chroma-begin="15.0" chroma-end="INF" value-begin="5.5" value-end="6.5" />
+			<range color="255" chroma-begin="11.0" chroma-end="13.0" value-begin="3.5" value-end="5.5" />
+			<range color="256" chroma-begin="9.0" chroma-end="13.0" value-begin="2.0" value-end="3.5" />
+			<range color="257" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="2.0" />
+			<range color="258" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="5.5" />
+			<range color="259" chroma-begin="3.0" chroma-end="9.0" value-begin="2.0" value-end="3.5" />
+			<range color="259" chroma-begin="2.0" chroma-end="3.0" value-begin="2.0" value-end="2.5" />
+			<range color="260" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="261" chroma-begin="3.0" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="262" chroma-begin="3.0" chroma-end="7.0" value-begin="3.5" value-end="5.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+		<hue-range begin="9RP" end="1R"><!-- page 31 -->
+			<range color="1" chroma-begin="11.0" chroma-end="INF" value-begin="6.5" value-end="INF" />
+			<range color="2" chroma-begin="7.0" chroma-end="11.0" value-begin="6.5" value-end="INF" />
+			<range color="3" chroma-begin="7.0" chroma-end="15.0" value-begin="5.5" value-end="6.5" />
+			<range color="4" chroma-begin="3.0" chroma-end="7.0" value-begin="8.0" value-end="INF" />
+			<range color="5" chroma-begin="3.0" chroma-end="7.0" value-begin="6.5" value-end="8.0" />
+			<range color="6" chroma-begin="5.0" chroma-end="7.0" value-begin="5.5" value-end="6.5" />
+			<range color="7" chroma-begin="1.5" chroma-end="3.0" value-begin="8.0" value-end="INF" />
+			<range color="8" chroma-begin="1.5" chroma-end="3.0" value-begin="6.5" value-end="8.0" />
+			<range color="9" chroma-begin="0.5" chroma-end="1.5" value-begin="8.5" value-end="INF" />
+			<range color="10" chroma-begin="0.5" chroma-end="1.5" value-begin="6.5" value-end="8.5" />
+			<range color="227" chroma-begin="1.5" chroma-end="3.0" value-begin="5.5" value-end="6.5" />
+			<range color="228" chroma-begin="1.5" chroma-end="3.0" value-begin="3.5" value-end="5.5" />
+			<range color="229" chroma-begin="0.5" chroma-end="2.0" value-begin="2.0" value-end="2.5" />
+			<range color="229" chroma-begin="1.5" chroma-end="3.0" value-begin="2.5" value-end="3.5" />
+			<range color="230" chroma-begin="1.0" chroma-end="2.0" value-begin="0.0" value-end="2.0" />
+			<range color="233" chroma-begin="0.5" chroma-end="1.5" value-begin="4.5" value-end="6.5" />
+			<range color="234" chroma-begin="0.5" chroma-end="1.5" value-begin="2.5" value-end="4.5" />
+			<range color="235" chroma-begin="0.5" chroma-end="1.0" value-begin="0.0" value-end="2.0" />
+			<range color="254" chroma-begin="11.0" chroma-end="INF" value-begin="0.0" value-end="2.0" />
+			<range color="254" chroma-begin="13.0" chroma-end="INF" value-begin="2.0" value-end="5.5" />
+			<range color="254" chroma-begin="15.0" chroma-end="INF" value-begin="5.5" value-end="6.5" />
+			<range color="255" chroma-begin="11.0" chroma-end="13.0" value-begin="3.5" value-end="5.5" />
+			<range color="256" chroma-begin="9.0" chroma-end="13.0" value-begin="2.0" value-end="3.5" />
+			<range color="257" chroma-begin="7.0" chroma-end="11.0" value-begin="0.0" value-end="2.0" />
+			<range color="258" chroma-begin="7.0" chroma-end="11.0" value-begin="3.5" value-end="5.5" />
+			<range color="259" chroma-begin="3.0" chroma-end="9.0" value-begin="2.0" value-end="3.5" />
+			<range color="259" chroma-begin="2.0" chroma-end="3.0" value-begin="2.0" value-end="2.5" />
+			<range color="260" chroma-begin="2.0" chroma-end="7.0" value-begin="0.0" value-end="2.0" />
+			<range color="261" chroma-begin="3.0" chroma-end="5.0" value-begin="5.5" value-end="6.5" />
+			<range color="262" chroma-begin="3.0" chroma-end="7.0" value-begin="3.5" value-end="5.5" />
+			<range color="263" chroma-begin="0.0" chroma-end="0.5" value-begin="8.5" value-end="INF" />
+			<range color="264" chroma-begin="0.0" chroma-end="0.5" value-begin="6.5" value-end="8.5" />
+			<range color="265" chroma-begin="0.0" chroma-end="0.5" value-begin="4.5" value-end="6.5" />
+			<range color="266" chroma-begin="0.0" chroma-end="0.5" value-begin="2.5" value-end="4.5" />
+			<range color="267" chroma-begin="0.0" chroma-end="0.5" value-begin="0.0" value-end="2.5" />
+		</hue-range>
+	</ranges>
+</system>
