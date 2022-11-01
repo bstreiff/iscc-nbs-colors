@@ -1,0 +1,90 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:annotation>
+		<xsd:documentation xml:lang="en">
+			XML schema for ISCC-NBS XML
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:simpleType name="ColorIdType">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="267" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="MunsellHueName">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="([0-9]+(\.[0-9]*)?|\.[0-9]+)(R|YR|Y|GY|G|BG|B|PB|P|RP)" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="PositiveFloat">
+		<xsd:restriction base="xsd:float">
+			<xsd:minInclusive value="0.0" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="Amount">
+		<xsd:simpleContent>
+			<xsd:extension base="PositiveFloat">
+				<xsd:attribute name="id" use="optional" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="SystemAmountArrayType">
+		<xsd:sequence>
+			<xsd:element name="amount" type="Amount" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="NameType">
+		<xsd:sequence>
+			<xsd:element name="name" type="NameType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="color" type="ColorIdType" use="required" />
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="abbr" type="xsd:string" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="SystemNamesType">
+		<xsd:sequence>
+			<xsd:element name="name" type="NameType" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="RangeType">
+		<xsd:attribute name="color" type="ColorIdType" use="required" />
+		<xsd:attribute name="chroma-begin" type="PositiveFloat" use="required" />
+		<xsd:attribute name="chroma-end" type="PositiveFloat" use="required" />
+		<xsd:attribute name="value-begin" type="PositiveFloat" use="required" />
+		<xsd:attribute name="value-end" type="PositiveFloat" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="HueRangeType">
+		<xsd:sequence>
+			<xsd:element name="range" type="RangeType" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="begin" type="MunsellHueName" use="required" />
+		<xsd:attribute name="end" type="MunsellHueName" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="SystemRangesType">
+		<xsd:sequence>
+			<xsd:element name="hue-range" type="HueRangeType" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="SystemType">
+		<xsd:all>
+			<xsd:element name="names" minOccurs="1" maxOccurs="1" type="SystemNamesType" />
+			<xsd:element name="hues" minOccurs="1" maxOccurs="1" type="SystemAmountArrayType" />
+			<xsd:element name="chromas" minOccurs="1" maxOccurs="1" type="SystemAmountArrayType" />
+			<xsd:element name="values" minOccurs="1" maxOccurs="1" type="SystemAmountArrayType" />
+			<xsd:element name="ranges" minOccurs="1" maxOccurs="1" type="SystemRangesType" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:element name="system" type="SystemType" />
+
+</xsd:schema>
