@@ -1,0 +1,9 @@
+[package]
+name = "iscc-nbs-validator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+is_sorted = "0.1.1"
+roxmltree = "0.15.1"
+
