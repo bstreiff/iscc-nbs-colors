@@ -12,6 +12,11 @@ use std::io::Write;
 use std::ops::Range;
 use std::process::Command;
 
+use geo::extremes::Extremes;
+use geo::Centroid;
+use geo_clipper::Clipper;
+use geo_types::{Coordinate, LineString, Polygon};
+
 struct ColorName {
     name: String,
     abbr: String,
@@ -341,16 +346,18 @@ fn generate_gnuplot(
         let mut has_0p7 = false;
         let mut has_1p2 = false;
 
-        for (id, block) in hue_blocks.enumerate() {
+        let mut regions: HashMap<u32, Polygon> = HashMap::new();
+
+        for block in hue_blocks {
             let x1 = chromas[block.chromas.start].clone();
             let x2 = deinfinite(chromas[block.chromas.end].clone());
             let y1 = values[block.values.start].clone();
             let y2 = deinfinite(values[block.values.end].clone());
 
-            let x1f: f32 = x1.parse().unwrap();
-            let x2f: f32 = x2.parse::<f32>().unwrap().min(17.0);
-            let y1f: f32 = y1.parse().unwrap();
-            let y2f: f32 = y2.parse::<f32>().unwrap().min(10.5);
+            let x1f: f64 = x1.parse().unwrap();
+            let x2f: f64 = x2.parse::<f64>().unwrap().min(17.0);
+            let y1f: f64 = y1.parse().unwrap();
+            let y2f: f64 = y2.parse::<f64>().unwrap().min(10.5);
 
             if x1 == "0.7" || x2 == "0.7" {
                 has_0p7 = true;
@@ -360,41 +367,66 @@ fn generate_gnuplot(
                 has_1p2 = true;
             }
 
+            let area = Polygon::new(
+                LineString(vec![
+                    Coordinate { x: x1f, y: y1f },
+                    Coordinate { x: x1f, y: y2f },
+                    Coordinate { x: x2f, y: y2f },
+                    Coordinate { x: x2f, y: y1f },
+                ]),
+                vec![],
+            );
+            if regions.contains_key(&block.color_id) {
+                let union = regions.get(&block.color_id).unwrap().union(&area, 10.0);
+                regions.insert(block.color_id, union.into_iter().next().unwrap());
+            } else {
+                regions.insert(block.color_id, area);
+            }
+        }
+
+        for (id, region) in regions.iter() {
+            writeln!(&mut file, "").unwrap();
             writeln!(
                 &mut file,
-                "set object {} polygon from {},{} to {},{} to {},{} to {},{} to {},{} default",
+                "set object {} polygon from {} default",
                 id + 1,
-                x1,
-                y1,
-                x1,
-                y2,
-                x2,
-                y2,
-                x2,
-                y1,
-                x1,
-                y1
+                region
+                    .exterior()
+                    .points()
+                    .map(|v| format!("{},{}", v.x(), v.y()))
+                    .collect::<Vec<String>>()
+                    .join(" to ")
             )
             .unwrap();
 
-            let label_x = (x1f + x2f) / 2.0;
-            let label_y = (y1f + y2f) / 2.0;
+            let extremes = region.extremes().unwrap();
+            let poly_min = Coordinate {
+                x: extremes.x_min.coord.x,
+                y: extremes.y_min.coord.y,
+            };
+            let poly_max = Coordinate {
+                x: extremes.x_max.coord.x,
+                y: extremes.y_max.coord.y,
+            };
 
-            let is_vertical = (y2f - y1f) * 2.0 > (x2f - x1f);
+            let label_pos = region.centroid().unwrap();
+            let (label_x, label_y) = (label_pos.x(), label_pos.y());
+
+            let is_vertical = (poly_max.y - poly_min.y) * 2.0 > (poly_max.x - poly_min.x);
             let rotate = if is_vertical {
                 "rotate by 90"
             } else {
                 "norotate"
             };
-            let orig_name = names[&block.color_id].name.clone();
+            let orig_name = names[&id].name.clone();
 
             // gnuplot doesn't actually know about the bounding boxes in which we want to
             // put these labels, which means it also doesn't know how to word-wrap them.
             // Ideally I'd be able to compute this given the font and the string, but that's
             // difficult, so just come up with a cheap-hopefully-good-enough-for-this-data
             // approach.
-            let linebreak_thresh = (orig_name.len() as f32) * 0.2 + 0.5;
-            let should_linebreak = !is_vertical && (x2f - x1f) < linebreak_thresh;
+            let linebreak_thresh = (orig_name.len() as f64) * 0.2 + 0.5;
+            let should_linebreak = !is_vertical && (poly_max.x - poly_min.x) < linebreak_thresh;
             let label_name = if should_linebreak {
                 linebreak(orig_name)
             } else {
@@ -406,7 +438,7 @@ fn generate_gnuplot(
                 &mut file,
                 "set label {} \"{{/:Bold {}}}: {}\" at first {},{} center {}",
                 id + 1,
-                block.color_id,
+                id,
                 label_name,
                 label_x,
                 label_y,
@@ -426,7 +458,7 @@ fn generate_gnuplot(
             writeln!(&mut file, "set xtics add (\"0.7\" 0.7 1)").unwrap();
             writeln!(
                 &mut file,
-                "set label 100 \"0.7\" at first 0.65,-0.25 center font \"Verdana,6\""
+                "set label 1000 \"0.7\" at first 0.65,-0.25 center font \"Verdana,6\""
             )
             .unwrap();
         }
@@ -434,7 +466,7 @@ fn generate_gnuplot(
             writeln!(&mut file, "set xtics add (\"1.2\" 1.2 1)").unwrap();
             writeln!(
                 &mut file,
-                "set label 101 \"1.2\" at first 1.25,-0.25 center font \"Verdana,6\""
+                "set label 1001 \"1.2\" at first 1.25,-0.25 center font \"Verdana,6\""
             )
             .unwrap();
         }
