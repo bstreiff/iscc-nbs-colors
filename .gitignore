@@ -1,3 +1,6 @@
 /target
 .env
 Cargo.lock
+
+# ignore gnuplot intermediate output
+/doc/*.gnu
