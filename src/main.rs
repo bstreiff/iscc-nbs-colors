@@ -12,10 +12,12 @@ use std::io::Write;
 use std::ops::Range;
 use std::process::Command;
 
+use fontconfig::Fontconfig;
 use geo::extremes::Extremes;
 use geo::Centroid;
 use geo_clipper::Clipper;
 use geo_types::{Coordinate, LineString, Polygon};
+use ttf_word_wrap::{TTFParserMeasure, WhiteSpaceWordWrap, Wrap};
 
 struct ColorName {
     name: String,
@@ -301,10 +303,6 @@ fn deinfinite(x: String) -> String {
     }
 }
 
-fn linebreak(x: String) -> String {
-    return x.replace(" ", "\\n");
-}
-
 fn generate_gnuplot(
     blocks: &Vec<ColorBlock>,
     hues: &Vec<String>,
@@ -313,6 +311,11 @@ fn generate_gnuplot(
     names: &HashMap<u32, ColorName>,
 ) {
     const FONT_FACE: &'static str = "DejaVu Sans";
+    let fc = Fontconfig::new().unwrap();
+    let font = fc.find(FONT_FACE, None).unwrap();
+    let font_data = std::fs::read(font.path).expect("font does not exist");
+    let font_face = ttf_parser::Face::from_slice(&font_data, 0).expect("TTF should be valid");
+    let measure = TTFParserMeasure::new(&font_face);
 
     for h in 0..hues.len() {
         let hue_blocks = blocks.iter().filter(|x| h == x.hues.start);
@@ -414,37 +417,63 @@ fn generate_gnuplot(
             let label_pos = region.centroid().unwrap();
             let (label_x, label_y) = (label_pos.x(), label_pos.y());
 
-            let is_vertical = (poly_max.y - poly_min.y) * 2.0 > (poly_max.x - poly_min.x);
-            let rotate = if is_vertical {
-                "rotate by 90"
-            } else {
-                "norotate"
-            };
-            let orig_name = names[&id].name.clone();
+            // Should probably be computed from the graph view somehow but:
+            const HORIZ_SCALE_FACTOR: f64 = 6000.0;
+            const VERT_SCALE_FACTOR: f64 = 14000.0;
 
-            // gnuplot doesn't actually know about the bounding boxes in which we want to
-            // put these labels, which means it also doesn't know how to word-wrap them.
-            // Ideally I'd be able to compute this given the font and the string, but that's
-            // difficult, so just come up with a cheap-hopefully-good-enough-for-this-data
-            // approach.
-            let linebreak_thresh = (orig_name.len() as f64) * 0.2 + 0.5;
-            let should_linebreak = !is_vertical && (poly_max.x - poly_min.x) < linebreak_thresh;
-            let label_name = if should_linebreak {
-                linebreak(orig_name)
+            let label_text: String = format!("{}: {}", id, names[&id].name);
+
+            // try a word wrap horizontally
+            let h_word_wrap = WhiteSpaceWordWrap::new(
+                (HORIZ_SCALE_FACTOR * (poly_max.x - poly_min.x)) as u32,
+                &measure,
+            );
+            let h_lines = label_text
+                .as_str()
+                .wrap(&h_word_wrap)
+                .collect::<Vec<&str>>();
+
+            // try a word wrap vertically
+            let v_word_wrap = WhiteSpaceWordWrap::new(
+                (VERT_SCALE_FACTOR * (poly_max.y - poly_min.y)) as u32,
+                &measure,
+            );
+            let v_lines = label_text
+                .as_str()
+                .wrap(&v_word_wrap)
+                .collect::<Vec<&str>>();
+
+            // Base the winner on line count.
+            let is_horiz = h_lines.len() <= v_lines.len();
+
+            let linebreaked_label = (if is_horiz { &h_lines } else { &v_lines }).join("\\n");
+            let rotate = if is_horiz { "norotate" } else { "rotate by 90" };
+            let offset_x = if is_horiz {
+                0.0
             } else {
-                orig_name
+                -((v_lines.len() - 1) as f32) / 2.0
+            };
+            let offset_y = if is_horiz {
+                ((h_lines.len() - 1) as f32) / 2.0
+            } else {
+                0.0
             };
 
-            // should this be done with the "labels" plot style instead?
+            // yank off the ID then add it back in boldface (hopefully this doesn't
+            // change the width too much...)
+            let (prefix, suffix) = linebreaked_label.split_once(':').unwrap();
+            let linebreaked_label = format!("{{/:Bold {}}}:{}", prefix, suffix);
+
             writeln!(
                 &mut file,
-                "set label {} \"{{/:Bold {}}}: {}\" at first {},{} center {}",
+                "set label {} \"{}\" at first {},{} center {} offset character {},{}",
                 id + 1,
-                id,
-                label_name,
+                linebreaked_label,
                 label_x,
                 label_y,
-                rotate
+                rotate,
+                offset_x,
+                offset_y
             )
             .unwrap();
         }

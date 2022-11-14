@@ -4,9 +4,12 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+fontconfig = { version = "0.6.0", features = ["dlopen"] }
 geo = "0.23.0"
 geo-clipper = "0.7.3"
 geo-types = "0.7.7"
 is_sorted = "0.1.1"
 roxmltree = "0.15.1"
+ttf-parser = "0.12.3"
+ttf_word_wrap = "0.5.0"
 
