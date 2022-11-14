@@ -312,6 +312,8 @@ fn generate_gnuplot(
     values: &Vec<String>,
     names: &HashMap<u32, ColorName>,
 ) {
+    const FONT_FACE: &'static str = "DejaVu Sans";
+
     for h in 0..hues.len() {
         let hue_blocks = blocks.iter().filter(|x| h == x.hues.start);
 
@@ -449,7 +451,8 @@ fn generate_gnuplot(
 
         writeln!(
             &mut file,
-            "set xtics border nomirror out scale 2.0 font 'Verdana,8'"
+            "set xtics border nomirror out scale 2.0 font '{},8'",
+            FONT_FACE
         )
         .unwrap();
         writeln!(&mut file, "set xtics 0, 2.0").unwrap();
@@ -458,7 +461,8 @@ fn generate_gnuplot(
             writeln!(&mut file, "set xtics add (\"0.7\" 0.7 1)").unwrap();
             writeln!(
                 &mut file,
-                "set label 1000 \"0.7\" at first 0.65,-0.25 center font \"Verdana,6\""
+                "set label 1000 \"0.7\" at first 0.65,-0.25 center font \"{},6\"",
+                FONT_FACE
             )
             .unwrap();
         }
@@ -466,7 +470,8 @@ fn generate_gnuplot(
             writeln!(&mut file, "set xtics add (\"1.2\" 1.2 1)").unwrap();
             writeln!(
                 &mut file,
-                "set label 1001 \"1.2\" at first 1.25,-0.25 center font \"Verdana,6\""
+                "set label 1001 \"1.2\" at first 1.25,-0.25 center font \"{},6\"",
+                FONT_FACE
             )
             .unwrap();
         }
@@ -474,7 +479,8 @@ fn generate_gnuplot(
         writeln!(&mut file, "set mxtics 2").unwrap();
         writeln!(
             &mut file,
-            "set ytics border nomirror out scale 2.0 font 'Verdana,8'"
+            "set ytics border nomirror out scale 2.0 font '{},8'",
+            FONT_FACE
         )
         .unwrap();
         writeln!(&mut file, "set ytics 0, 1.0").unwrap();
@@ -482,7 +488,8 @@ fn generate_gnuplot(
 
         writeln!(
             &mut file,
-            "set terminal pngcairo size 600,800 enhanced font 'Verdana,7'"
+            "set terminal pngcairo size 600,800 enhanced font '{},7'",
+            FONT_FACE
         )
         .unwrap();
         writeln!(&mut file, "set output '{}.png'", basename).unwrap();
