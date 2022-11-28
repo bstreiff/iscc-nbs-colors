@@ -3,6 +3,8 @@
 // SPDX-License-Identifier: MIT
 
 extern crate is_sorted;
+mod degree;
+mod munsell;
 
 use is_sorted::IsSorted;
 
@@ -17,7 +19,11 @@ use geo::extremes::Extremes;
 use geo::Centroid;
 use geo_clipper::Clipper;
 use geo_types::{Coordinate, LineString, Polygon};
+use palette::{convert::FromColorUnclamped, Clamp, IntoColor, Lch, Srgb};
 use ttf_word_wrap::{TTFParserMeasure, WhiteSpaceWordWrap, Wrap};
+
+use degree::{degree_average, degree_diff};
+use munsell::{MunsellColor, MunsellHue};
 
 struct ColorName {
     name: String,
@@ -303,12 +309,104 @@ fn deinfinite(x: String) -> String {
     }
 }
 
+#[derive(Clone)]
+struct ColorAccumulator {
+    v: f32,
+    c: f32,
+    hx: f32,
+    hy: f32,
+    volume: f32,
+}
+
+fn get_mean_colors(
+    blocks: &Vec<ColorBlock>,
+    hues: &Vec<String>,
+    chromas: &Vec<String>,
+    values: &Vec<String>,
+) -> Vec<Srgb> {
+    // make a bucket for each level3
+    let mut acc: Vec<ColorAccumulator> = Vec::with_capacity(267);
+    acc.resize(
+        267,
+        ColorAccumulator {
+            v: 0.0,
+            c: 0.0,
+            hx: 0.0,
+            hy: 0.0,
+            volume: 0.0,
+        },
+    );
+
+    for block in blocks {
+        let hue_start = hues[block.hues.start].clone();
+        let hue_end = hues[block.hues.end].clone();
+        let chroma_start = chromas[block.chromas.start].clone();
+        let chroma_end = deinfinite(chromas[block.chromas.end].clone());
+        let value_start = values[block.values.start].clone();
+        let value_end = deinfinite(values[block.values.end].clone());
+
+        let hue_start = MunsellHue::from_str(&hue_start);
+        let hue_end = MunsellHue::from_str(&hue_end);
+        let hue_delta = degree_diff(hue_start.to_degrees(), hue_end.to_degrees());
+
+        let chroma_start_f: f32 = chroma_start.parse().unwrap();
+        let chroma_end_f: f32 = chroma_end.parse::<f32>().unwrap().min(16.0);
+        let value_start_f: f32 = value_start.parse().unwrap();
+        let value_end_f: f32 = value_end.parse::<f32>().unwrap().min(10.0);
+
+        let area_outer = chroma_end_f * chroma_end_f * hue_delta.to_degrees() / 360.0;
+        let area_inner = chroma_start_f * chroma_start_f * hue_delta.to_degrees() / 360.0;
+        let area = area_outer - area_inner;
+        let volume = area * (value_end_f - value_start_f);
+
+        let center_chroma = (chroma_start_f + chroma_end_f) / 2.0;
+        let center_value = (value_start_f + value_end_f) / 2.0;
+        let center_hue = degree_average(hue_start.to_degrees(), hue_end.to_degrees());
+        let center_huex = center_hue.to_radians().cos();
+        let center_huey = center_hue.to_radians().sin();
+
+        let a = &mut acc[(block.color_id - 1) as usize];
+        a.v += center_value * volume;
+        a.c += center_chroma * volume;
+        a.hx += center_huex * volume;
+        a.hy += center_huey * volume;
+        a.volume += volume;
+    }
+
+    let rgbout = acc
+        .into_iter()
+        .map(|a| {
+            let angle_degrees = ((a.hy / a.volume).atan2(a.hx / a.volume)).to_degrees();
+            let munsell_hue = MunsellHue::new(((angle_degrees * 100.0 / 360.0) + 100.0) % 100.0);
+            let mun = MunsellColor::new(munsell_hue, a.v / a.volume, a.c / a.volume);
+
+            // Convert average Munsell color to Lch, then to RGB. If the resulting RGB
+            // is out-of-range, reduce chroma until we're back in-range.
+            let mut lch = mun.to_approximate_lch();
+            let mut rgb = Srgb::from_color_unclamped(lch);
+            loop {
+                if rgb.is_within_bounds() {
+                    break;
+                }
+
+                lch.chroma *= 0.99;
+                rgb = Srgb::from_color_unclamped(lch);
+            }
+
+            return rgb;
+        })
+        .collect::<Vec<Srgb>>();
+
+    return rgbout;
+}
+
 fn generate_gnuplot(
     blocks: &Vec<ColorBlock>,
     hues: &Vec<String>,
     chromas: &Vec<String>,
     values: &Vec<String>,
     names: &HashMap<u32, ColorName>,
+    colors: &Vec<Srgb>,
 ) {
     const FONT_FACE: &'static str = "DejaVu Sans";
     let fc = Fontconfig::new().unwrap();
@@ -391,16 +489,19 @@ fn generate_gnuplot(
 
         for (id, region) in regions.iter() {
             writeln!(&mut file, "").unwrap();
+            let color = colors[(id - 1) as usize];
+            let color_u8: Srgb<u8> = color.into_format();
             writeln!(
                 &mut file,
-                "set object {} polygon from {} default",
+                "set object {} polygon from {} fc rgbcolor \"#{:x}\" fs solid 1.0 border lc \"#000000\"",
                 id + 1,
                 region
                     .exterior()
                     .points()
                     .map(|v| format!("{},{}", v.x(), v.y()))
                     .collect::<Vec<String>>()
-                    .join(" to ")
+                    .join(" to "),
+                color_u8
             )
             .unwrap();
 
@@ -464,14 +565,22 @@ fn generate_gnuplot(
             let (prefix, suffix) = linebreaked_label.split_once(':').unwrap();
             let linebreaked_label = format!("{{/:Bold {}}}:{}", prefix, suffix);
 
+            let color_lch: Lch = color.into_color();
+            let textcolor = if color_lch.l > 40.0 {
+                "000000"
+            } else {
+                "FFFFFF"
+            };
+
             writeln!(
                 &mut file,
-                "set label {} \"{}\" at first {},{} center {} offset character {},{}",
+                "set label {} \"{}\" at first {},{} center {} textcolor \"#{}\" offset character {},{}",
                 id + 1,
                 linebreaked_label,
                 label_x,
                 label_y,
                 rotate,
+                textcolor,
                 offset_x,
                 offset_y
             )
@@ -556,6 +665,7 @@ fn main() {
     let values = get_values(&doc);
 
     let blocks = validate_blocks(&doc, &hues, &chromas, &values);
+    let colors = get_mean_colors(&blocks, &hues, &chromas, &values);
 
-    generate_gnuplot(&blocks, &hues, &chromas, &values, &level3_names);
+    generate_gnuplot(&blocks, &hues, &chromas, &values, &level3_names, &colors);
 }
