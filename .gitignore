@@ -4,3 +4,6 @@ Cargo.lock
 
 # ignore gnuplot intermediate output
 /doc/*.gnu
+
+.ipynb_checkpoints
+__pycache__
