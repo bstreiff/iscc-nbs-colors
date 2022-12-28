@@ -99,3 +99,26 @@ def set_xticks_munsell_hues(ax):
 
     ax.set_xticks(xtick_major_ticks, labels=xtick_major_labels, minor=False)
     ax.set_xticks(xtick_minor_ticks, labels=xtick_minor_labels, minor=True)
+
+
+def munsell_hue_point_name(hp):
+    hue, hue_code = point_to_hue_and_code(hp)
+    hue_letter = next(key for key, value in munsell.MUNSELL_HUE_LETTER_CODES.items() if value == hue_code)
+    return '{}{}'.format(hue, hue_letter)
+
+
+def degree_average(f1, f2):
+    c1 = np.cos(np.deg2rad(f1))
+    c2 = np.cos(np.deg2rad(f2))
+    s1 = np.sin(np.deg2rad(f1))
+    s2 = np.sin(np.deg2rad(f2))
+    cavg = (c1 + c2) / 2.0
+    savg = (s1 + s2) / 2.0
+
+    return np.rad2deg(math.atan2(savg, cavg))
+
+
+def hue_point_average(f1, f2):
+    avg = degree_average(f1 * (math.pi / 50.0),
+                         f2 * (math.pi / 50.0))
+    return ((avg / (math.pi / 50.0)) + 100.0) % 100.0

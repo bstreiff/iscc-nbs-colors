@@ -82,6 +82,9 @@ class ColorMatch(object):
     def __repr__(self):
         return f'ColorMatch({self.id}, {self.hue_begin}, {self.hue_end}, {self.value_begin}, {self.value_end}, {self.chroma_begin}, {self.chroma_end})'
 
+    def copy(self):
+        return ColorMatch(self.id, self.hue_begin, self.hue_end, self.value_begin, self.value_end, self.chroma_begin, self.chroma_end)
+
 
 class CentroidColorAccumulator(object):
     def __init__(self):
